@@ -448,6 +448,24 @@ h6.separator-quote-3 a{
   background-color: #efefef;
 }
 
+
+/* Roles */
+
+.roles-body{
+  padding: 0 0;
+  text-align: center;
+}
+
+.roles-body p{
+  text-align: justify;
+  padding-top:10px;
+}
+
+.roles-body h3,h4{
+  text-align: left;
+  padding-top:10px;
+}
+
 /* Contact info */
 #map {
     height: 350px;
