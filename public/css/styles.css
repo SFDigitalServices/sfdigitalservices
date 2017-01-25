@@ -453,7 +453,7 @@ h6.separator-quote-3 a{
 /* Roles */
 
 .roles-body{
-padding: 0 0;
+padding: 0 25px;
 text-align: center;
 }
 
@@ -465,6 +465,17 @@ padding-top:10px;
 .roles-body h3,h4{
 text-align: left;
 padding-top:10px;
+}
+
+
+
+.jobcat{
+margin-top: 50px;
+margin-bottom: 20px;
+display: inline-block;
+}
+.jobcat:hover{
+color: #0082ed;
 }
 
 
