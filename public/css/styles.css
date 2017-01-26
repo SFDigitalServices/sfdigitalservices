@@ -166,6 +166,9 @@ button:active {
   border-top: 3px solid #0082ed!important;
   width: 50px;
 }
+.mid-separator{
+  margin-top: 70px;
+}
 .navbar {
   background-color: #0082ed;
   color: #fff;
@@ -453,30 +456,29 @@ h6.separator-quote-3 a{
 /* Roles */
 
 .roles-body{
-padding: 0 0px;
-text-align: center;
+  padding: 0 25px;
+  text-align: center;
 }
 
 .roles-body p{
-text-align: justify;
-padding-top:10px;
+  text-align: justify;
+  padding-top:10px;
 }
 
 .roles-body h3,h4{
-text-align: left;
-padding-top:10px;
+  text-align: left;
+  padding-top:10px;
 }
 
 
 
 .jobcat{
-margin-top: 50px;
-margin-bottom: 20px;
-display: inline-block;
+  margin-top: 50px;
+  display: inline-block;
 }
 .jobcat:hover{
-color: #0082ed;
-}
+  color: #0082ed;
+  }
 
 
 /* Contact info */
