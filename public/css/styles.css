@@ -462,10 +462,15 @@ h6.separator-quote-3 a{
 
 .roles-body p{
   text-align: justify;
-  padding: 5px 0px 25px 0px;
+  padding: 5px 0px 5px 0px;
 }
 
-.roles-body h3,h4{
+.roles-body h3{
+  text-align: left;
+  padding-top: 20px;
+}
+
+.roles-body h4{
   text-align: left;
   padding-top: 5px;
 }
