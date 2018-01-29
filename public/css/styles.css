@@ -485,6 +485,10 @@ h6.separator-quote-3 a{
   color: #0082ed;
   }
 
+.text-align-left {
+  text-align: left;
+}
+
 
 /* Contact info */
 #map {
