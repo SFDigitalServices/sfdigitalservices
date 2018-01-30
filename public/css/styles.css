@@ -742,6 +742,12 @@ footer p {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: auto;
+  }
+}
+
 
 /* -------------------- Tablet Portrait Size -------------------- */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
