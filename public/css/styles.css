@@ -306,9 +306,14 @@ h6.separator-quote-3 a{
   text-align: center;
   color: #fefefe;
 }
+.main h3 {
+  font-weight: 800;
+  text-shadow: 1px 1px 1px #041A2E;  
+}
 .title {
-  font-size: 3em;
-  font-weight: 300;
+  font-size: 3.5em;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px #041A2E;  
 }
 
 /* About */
@@ -473,6 +478,8 @@ h6.separator-quote-3 a{
 .roles-body h4{
   text-align: left;
   padding-top: 5px;
+  text-transform: capitalize;
+  font-weight: 600;
 }
 
 /* Job Categories */
@@ -502,9 +509,13 @@ h6.separator-quote-3 a{
 .margin-top-20 {
   margin-top: 20px;
 }
+.margin-top-50 {
+  margin-top: 50px;
+}
 
 .jobs .housing-service-team h3 {
-  font-weight: 400;
+  font-weight: 600;
+  margin-top: 100px;
 }
 
 /*body.jobs .about-body {
