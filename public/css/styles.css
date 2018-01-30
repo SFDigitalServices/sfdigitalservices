@@ -606,6 +606,17 @@ footer p {
   color: #fefefe;
 }
 
+body.jobs .about-body {
+  padding: 0 25px;
+  margin-left: 0;
+  width: auto;
+}
+
+body.jobs #about .container,
+body.jobs #roadmap {
+  width: auto;
+}
+
 /* Page-Editor*/
 
 .page-form input, .page-form textarea {
