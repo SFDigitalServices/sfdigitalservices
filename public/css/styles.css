@@ -499,6 +499,21 @@ h6.separator-quote-3 a{
   padding: 0 25px;
 }
 
+/*body.jobs .about-body {
+  padding: 0 25px;
+  margin-left: 0;
+  width: auto;
+}
+
+body.jobs #about .container,
+body.jobs #roadmap {
+  width: auto;
+}*/
+
+body.jobs p,
+body.job-description p {
+  text-align: left !important;
+}
 
 /* Contact info */
 #map {
@@ -604,17 +619,6 @@ footer p {
 }
 .credit a:hover{
   color: #fefefe;
-}
-
-body.jobs .about-body {
-  padding: 0 25px;
-  margin-left: 0;
-  width: auto;
-}
-
-body.jobs #about .container,
-body.jobs #roadmap {
-  width: auto;
 }
 
 /* Page-Editor*/
