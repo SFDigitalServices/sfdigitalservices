@@ -11,7 +11,8 @@ use Rack::Static,
     "/housingproductmanager.html",
     "/fullstackengineer.html",
     "/salesforceengineer.html",
-    "/designer.html"
+    "/designer.html",
+    "/productmanager.html"
   ],
   :root => "public"
 
