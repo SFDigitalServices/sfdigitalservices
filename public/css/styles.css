@@ -482,6 +482,19 @@ h6.separator-quote-3 a{
   font-weight: 600;
 }
 
+.roles-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.roles-body li {
+  margin-bottom: 16px;
+}
+
+.roles-body h3 {
+  margin-bottom: 16px;
+}
+
 /* Job Categories */
 
 .jobcat{
