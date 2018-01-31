@@ -483,8 +483,8 @@ h6.separator-quote-3 a{
 }
 
 .roles-body ul {
-  list-style: none;
-  padding-left: 0;
+  list-style-type: square;
+  padding-left: 20px;
 }
 
 .roles-body li {
