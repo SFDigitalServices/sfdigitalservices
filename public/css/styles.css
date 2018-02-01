@@ -788,15 +788,75 @@ footer p {
   h3.separator-quote-1 {padding-top: 20px;font-size: 1.3em;}
 }
 
+nav .menu {
+  list-style-type: none;
+  margin: 0;
+  -webkit-transition: all 0.3s;
+}
+
+nav .menu li {
+  display: inline-block;
+  font-size: 1em;
+}
+
+nav #ham {
+  display: none;
+}
+
+nav .menu.in {
+  transform: translate3d(-300px, 0, 0);
+  box-shadow: -1px 1px 10px 1px #666;
+}
+
+nav .menu #menu-back {
+  display: none;
+  background: #eee;
+}
+
 /* -------------------- Mobile Landscape -------------------- */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-.about-body p{text-align: center;}
-.roadmap-body p {text-align: center;}
+  .about-body p{text-align: center;}
+  .roadmap-body p {text-align: center;}
+  nav .menu {
+    /*display: none;*/
+    background: #fff;
+    position: absolute;
+    width: 300px;
+    right: -300px;
+    top: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav .menu #menu-back {
+    display: block;
+  }
+
+  nav .menu li {
+    display: block;
+    border: 1px solid #dedee0;
+    border-width: 0 0 1px 0;
+    margin: 0;
+  }
+
+  nav .menu a {
+    color: #767676;
+    text-align: left;
+    padding: 10px;
+    display: block;
+    max-width: 100%;
+  }
+
+  nav #ham {
+    display: block;
+  }
 }
 
 /* -------------------- Mobile Portrait -------------------- */
 @media only screen and (max-width: 479px) {
-.about-body p{text-align: center;}  
+  .about-body p {
+    text-align: center;
+  }
 }
 
 /* Retina Display Media Query */
