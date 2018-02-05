@@ -792,6 +792,7 @@ nav .menu {
   list-style-type: none;
   margin: 0;
   -webkit-transition: all 0.3s;
+  z-index: 1100;
 }
 
 nav .menu li {
@@ -811,6 +812,16 @@ nav .menu.in {
 nav .menu #menu-back {
   display: none;
   background: #eee;
+}
+
+#nav-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1050;
+  background: #333;
+  opacity: 0.5;
+  display: none;
 }
 
 /* -------------------- Mobile Landscape -------------------- */

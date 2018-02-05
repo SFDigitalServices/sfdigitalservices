@@ -1,15 +1,16 @@
-$('#ham, #menu-back').click(function() {
+$('#ham, #menu-back').click(function(e) {
+  e.preventDefault();
   if($('#menu').hasClass('in')) {
     $('#menu').removeClass('in');
     setTimeout(function() {
       $('#menu').css({'height':'auto'});
     }, 300);
   } else {
+    var wHeight = $(window).height() + 'px';
     $('#menu').addClass('in');
-    $('#menu').css({'height':$(window).height() + 'px'});
+    $('#menu').css({'height': wHeight });
+    // $('#nav-overlay').css({'height': wHeight, 'display': 'block' });
   }
-  // $('#menu').toggleClass('in');
-  // $('#menu.in').height($(window).height());
 });
 
 $(window).resize(function() {
