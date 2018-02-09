@@ -231,6 +231,20 @@ button:active {
   color: #66FF99;
 }
 
+/* Home page styles -----------------------------------------------
+-----------------------------------------------------------------*/
+
+#top3 {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#top3 img {
+  width: 120px;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* Main */
 #background-image {
   height: 650px;
@@ -259,11 +273,12 @@ button:active {
 }
 h3.separator-quote-1 {
   padding-top: 40px;
-  text-align: center;
+  text-align: left;
   color: #fff;
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: 700;
   line-height: 1.4;
+  text-transform: none;
 }
 h3.separator-quote-2 {
   text-align: right;
