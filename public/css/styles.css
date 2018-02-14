@@ -274,6 +274,7 @@ button:active {
 }
 h3.separator-quote-1 {
   padding-top: 40px;
+  padding-bottom: .75em;
   text-align: left;
   color: #fff;
   font-size: 2em;
