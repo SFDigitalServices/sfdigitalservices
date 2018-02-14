@@ -24,12 +24,18 @@
 <body>
   <nav id="navbar" class="navbar navbar-fixed-top" role="navigation">
     <div class="container">
-      <a class="navbar-brand logo" href="/"><img src="assets/SF_Digital_Services-logo.png"></a>
+      <a class="navbar-brand logo" href="index.html"><img src="assets/SF_Digital_Services-logo.png"></a>
       <div class="nav-right">
-        <!-- <a href="/CDSO.html">Apply</a> -->
+        <a id="ham" href="javascript:void(0)">Menu</a>
+        <ul id="menu" class="menu">
+          <li><a href="#" id="menu-back"><svg style="fill:#0082ed;height:1.25rem;width:1.25rem"><path d="M13.25 10l-7.141-7.42c-0.268-0.27-0.268-0.707 0-0.979 0.268-0.27 0.701-0.27 0.969 0l7.83 7.908c0.268 0.271 0.268 0.709 0 0.979l-7.83 7.908c-0.268 0.271-0.701 0.27-0.969 0s-0.268-0.707 0-0.979l7.141-7.417z"></path></svg></a></li>
+<!--           <li><a href="#">Work</a></li>
+          <li><a href="#">Team</a></li> -->
+          <li><a href="strategy.html">Strategy</a></li>
+          <!--<li><a id="nav-cdso" href="publicparticipation.html">Participate</a></li>-->
+          <li><a id="nav-cdso" href="joinus.html">Join us</a></li>
       </div>
-    </div>  
-    
+    </div>
   </nav>
     <!-- Header -->
     <div class="overlay"></div>
@@ -199,23 +205,25 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <ul class="footer-links list-inline h5">
-                        <li><a id="footer-home-2" href="/">Home</a></li><br class="visible-xs">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-10 col-lg-offset-1 text-center">
+                  <ul class="footer-links list-inline h5">
+                      <li><a id="footer-home" href="/">Home</a></li><br class="visible-xs">
 
-                      <li><a id="footer-about-2" href="/#about">About</a></li><br class="visible-xs">
+<!--                       <li><a id="footer-about" href="javascript:void(0)">Work</a></li><br class="visible-xs">
+
+                      <li><a id="footer-about" href="javascript:void(0)">Team</a></li><br class="visible-xs"> -->
                     
-                      <li><a id="footer-strategy-2" href="/assets/SF_DigitalServiceStrategy.pdf" target="_blank">Strategy</a></li><br class="visible-xs">
+                      <li><a id="footer-strategy" href="strategy.html" target="_blank">Strategy</a></li><br class="visible-xs">
                       
-                      <li><a id="footer-cdso-2" href="/CDSO.html">Join</a></li><br class="visible-xs">
-                    </ul>
-                    <br/>
-                   <h6 class="credit">&copy;2016 Made in San Francisco</h6>
-                </div>
-            </div>
-        </div>
+                      <li><a id="footer-cdso" href="joinus.html">Join</a></li><br class="visible-xs">
+                  </ul>
+                  <br/>
+                 <h6 class="credit">&copy;2016 Made in San Francisco</h6>
+              </div>
+          </div>
+      </div>
     </footer>
 
 </body>
