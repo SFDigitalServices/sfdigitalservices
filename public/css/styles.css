@@ -334,7 +334,8 @@ h6.separator-quote-3 a{
 }
 
 /* About */
-#about {
+#about,
+#participate {
   margin: 20px 0px 60px 0px;
 }
 .about-box {
