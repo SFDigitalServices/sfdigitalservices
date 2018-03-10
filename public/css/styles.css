@@ -855,7 +855,7 @@ nav .menu #menu-back {
   }
 }
 
-/*@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   nav .menu {
     background: #fff;
     position: absolute;
@@ -888,7 +888,7 @@ nav .menu #menu-back {
   nav #ham {
     display: block;
   }
-}*/
+}
 
 /* Retina Display Media Query */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
