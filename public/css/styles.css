@@ -836,7 +836,7 @@ nav .menu #menu-back {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 1050;
+  z-index: 1020;
   background: #333;
   opacity: 0.5;
   display: none;
