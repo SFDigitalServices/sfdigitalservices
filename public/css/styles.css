@@ -559,6 +559,10 @@ body.jobs #roadmap {
   width: auto;
 }*/
 
+.jobs .about-body {
+  text-align: left;
+}
+
 body.jobs p,
 body.job-description p {
   text-align: left !important;
