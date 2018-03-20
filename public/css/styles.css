@@ -342,13 +342,32 @@ h6.separator-quote-3 a{
   margin-top: 30px;
   text-align: center;
 }
-.about-body{
+.about-box ol {
+  padding-left: 30px;
+}
+.about-box ol li {
+  padding-left: 10px;
+}
+
+.about-body {
   padding: 0 0;
   text-align: center;
 }
-.about-body{
-  padding: 0 0;
+
+.about-body ol {
+  padding-left: 15px;
+  margin-top: 1.5em;
 }
+
+.about-body ol li {
+  padding-left: 10px;
+  padding-bottom: .5em;
+}
+
+.jobs .about-body {
+  margin-top: 2em;
+}
+
 .about-body p{
   text-align: justify;
   padding-top:10px;
@@ -537,6 +556,10 @@ h6.separator-quote-3 a{
   padding: 0 25px;
 }
 
+#mc_embed_signup {
+  margin-bottom: 2em;
+}
+
 .margin-top-20 {
   margin-top: 20px;
 }
@@ -634,6 +657,7 @@ footer {
   color: #fff;
   margin-bottom: 0px;
   padding: 20px 0px;
+  margin-top: 3em;
 }
 footer p {
   color: #fff;
@@ -698,13 +722,17 @@ footer p {
   background: rgba(0,0,0,0.1);
 }
 
-#nested_form input[type="file"], p, a{
+#nested_form input[type="file"] {
   max-width: 99%;
   text-align: center;
 }
-.misc-field input{
+.misc-field input {
   width: 50%;
   text-align: center;
+}
+
+.jobs ul {
+  text-align: left;
 }
 
 /* 20.Media-Query
