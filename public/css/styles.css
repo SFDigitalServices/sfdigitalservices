@@ -582,6 +582,10 @@ body.jobs #roadmap {
   width: auto;
 }*/
 
+.jobs .about-body {
+  text-align: left;
+}
+
 body.jobs p,
 body.job-description p {
   text-align: left !important;
@@ -864,7 +868,7 @@ nav .menu #menu-back {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 1050;
+  z-index: 1020;
   background: #333;
   opacity: 0.5;
   display: none;
@@ -883,7 +887,7 @@ nav .menu #menu-back {
   }
 }
 
-/*@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   nav .menu {
     background: #fff;
     position: absolute;
@@ -916,7 +920,7 @@ nav .menu #menu-back {
   nav #ham {
     display: block;
   }
-}*/
+}
 
 /* Retina Display Media Query */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
