@@ -666,6 +666,11 @@ footer {
 footer p {
   color: #fff;
 }
+
+footer ul {
+  text-align: center !important;
+}
+
 .footer-links li{
   margin-top: 10px;
 }
