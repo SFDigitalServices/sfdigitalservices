@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ if or (eq .Type "job") (eq .Params.the_type "job-index") }}San Francisco Digital Services - Jobs{{ else }}{{ .Title }}{{ end }}</title>
+    <meta name="description" content="Transforming the customer experience of government services">
+    {{ if gt (len .Keywords) 0 }}
+        <meta name="keywords" content="{{ range $i, $e := .Keywords }}{{ if $i }} {{ end }}{{ $e }}{{ end }}" />
+    {{ else if or (eq .Type "job") (eq .Params.the_type "job-index") }}
+        <meta name="keywords" content="san francisco, digital, services, strategy, city, sf, sfgov, digital services, hiring, developer, designer, product manager, product, UX, content, design, engineer, software, leader" />
+    {{ else }}
+        <meta name="keywords" content="san francisco, digital, services, strategy, city, sf, sfgov, digital services" />
+    {{ end }}
+    
+    <meta property="og:image" content="http://digitalservices.sfgov.org/assets/SFDS_Logo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body 
+    {{ if eq .Type "job" }} 
+        class="job-description" 
+    {{ else if eq .Params.the_type "job-index" }} 
+        class="jobs"
+    {{ end }}
+>
