@@ -1,6 +1,6 @@
 <!-- Header -->
 <div class="color-overlay"></div>
-<div id="background-image" style="background-image:url('/assets/sf_city_hall-bg.jpg');"></div>
+<div id="background-image" style="background-image:url('{{< resource url="assets/sf_city_hall-bg.jpg" >}}');"></div>
 <div id="home" class="main">
   <h1 class= "title">San Francisco Digital Services</h1>
   <h3>Making Services For Everyone</h3>
@@ -42,7 +42,8 @@
 <div id="top3" class="container">
   <div class="row">
     <div class="col-xs-12 col-md-4 blog">
-      <a href="https://medium.com/san-francisco-digital-service" target="_blank">{{< figure src="/assets/icons/blog.svg" >}}</a>
+      
+      <a href="https://medium.com/san-francisco-digital-service" target="_blank"><img src="{{< resource url="assets/icons/blog.svg" >}}" /></a>
       <h3>Our Blog</h3>
       <p>Read our latest updates.<br/>
         <a href="https://medium.com/san-francisco-digital-service" target="_blank">Visit our blog&nbsp;&#187;</a>
@@ -50,7 +51,7 @@
     </div>
     <!--blog-->
     <div class="col-xs-12 col-md-4 team">
-      <a href="joinus.html">{{< figure src="/assets/icons/team.svg" >}}</a>
+      <a href="joinus.html"><img src="{{< resource url="assets/icons/team.svg" >}}" /></a>
       <h3>Join us</h3>
       <p>We're technologists brought together by our love of San Francisco.<br/>
         <a href="joinus.html">Join our team&nbsp;&#187;</a>
@@ -58,7 +59,7 @@
     </div>
     <!--team-->
     <div class="col-xs-12 col-md-4 participate">
-      <a href="publicparticipation.html">{{< figure src="/assets/icons/participate.svg" >}}</a>
+      <a href="publicparticipation.html"><img src="{{< resource url="assets/icons/participate.svg" >}}" /></a>
       <h3>Participate</h3>
       <p>If you're an SF resident, sign up to hear about user testing opportunities.<br/>
         <a href="publicparticipation.html">Sign up for research&nbsp;&#187;</a>
