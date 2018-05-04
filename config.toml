@@ -1,5 +1,4 @@
 theme = "digitalservices"
-baseURL = ""
 languageCode = "en-us"
 title = "San Francisco Digital Services"
 MetaDataFormat = "toml"
