@@ -196,7 +196,7 @@ button:active {
 .logo img{
   background-color: #fff;
   margin-top: -15px;
-  width: 150px;
+  /*width: 150px;*/
   -moz-box-shadow:    -.5px .5px 6px 0px rgba(0,0,0,.5)
   -webkit-box-shadow: -.5px .5px 6px 0px rgba(0,0,0,.5);
   box-shadow:         -.5px .5px 6px 0px rgba(0,0,0,.5);
