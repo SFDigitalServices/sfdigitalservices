@@ -3,14 +3,14 @@
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1 text-center">
         <ul class="footer-links list-inline h5">
-          <li><a id="footer-home" href="{{ "/index.html" | absURL }}">Home</a></li><br class="visible-xs">
+          <li><a id="footer-home" href="{{ .Site.BaseURL }}">Home</a></li><br class="visible-xs">
           <!--<li><a id="footer-about" href="javascript:void(0)">Work</a></li><br class="visible-xs">
 
           <li><a id="footer-about" href="javascript:void(0)">Team</a></li><br class="visible-xs"> -->
           <li><a id="footer-strategy" href="https://medium.com/san-francisco-digital-service" target="_blank">Blog</a></li><br class="visible-xs">
-          <li><a id="footer-strategy" href="{{ "/strategy.html" | absURL }}">Strategy</a></li><br class="visible-xs">
+          <li><a id="footer-strategy" href="{{"strategy.html" | absURL }}">Strategy</a></li><br class="visible-xs">
           <!--<li><a id="footer-strategy" href="publicparticipation.html">Participate</a></li><br class="visible-xs">-->
-          <li><a id="footer-cdso" href="{{ "/joinus.html" | absURL }}">Join</a></li><br class="visible-xs">
+          <li><a id="footer-cdso" href="{{ "joinus.html" | absURL }}">Join</a></li><br class="visible-xs">
         </ul>
         <br/>
         <h6 class="credit">&copy;2016 Made in San Francisco</h6>
