@@ -6,7 +6,7 @@ aliases = [
 
 <!-- Header -->
 <div class="overlay"></div>
-<div id="background-image" style="background-image:url('/assets/gg-bg.jpg');"></div>
+<div id="background-image" style="background-image:url('{{< resource "/assets/gg-bg.jpg" >}}');"></div>
 <div id="home" class="main">
   <h1 class= "title">Come Build a Digital City</h1>
   <h3>We’re Hiring Technologists</h3>
@@ -25,7 +25,7 @@ aliases = [
 <!-- Services -->
 <div id="roadmap" class="container">
   <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
-    <p class="jobs-all-link"><a href="joinus.html"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;&nbsp;View all open roles</a></p>
+    <p class="jobs-all-link"><a href="{{< relref "joinus.html" >}}"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;&nbsp;View all open roles</a></p>
     <h1 class="sub-heading">Designer</h1>
     <div class="separator center"></div>
   </div>
@@ -89,11 +89,11 @@ aliases = [
     <div class="col-md-12 center">
       <p>Please fill out the form below to apply for a role. We'll also keep you in the loop about more opportunities in the future.</p>
       <p>
-        <a href="joinus.html"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;&nbsp;View all open roles</a>
+        <a href="{{< relref "joinus.html" >}}"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;&nbsp;View all open roles</a>
       </p>
     </div>
   </div>
 </div>
 <!-- Services End -->
-<div id="separator-image-3" style="background-image:url('/assets/bg-icons.png');"></div>
+<div id="separator-image-3" style="background-image:url('{{< resource "/assets/bg-icons.png" >}}');"></div>
 {{% joinuscontactform %}}

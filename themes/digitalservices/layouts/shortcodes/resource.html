@@ -1,1 +1,1 @@
-{{ .Site.BaseURL }}{{ .Get "url" }}
+{{- .Get "url" | absURL -}}
