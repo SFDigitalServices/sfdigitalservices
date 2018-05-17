@@ -860,7 +860,7 @@ nav #ham {
 }
 
 nav .menu.in {
-  transform: translate3d(-300px, 0, 0);
+  transform: translate3d(-100%, 0, 0);
   box-shadow: -1px 1px 10px 1px #666;
 }
 
@@ -896,8 +896,8 @@ nav .menu #menu-back {
   nav .menu {
     background: #fff;
     position: absolute;
-    width: 300px;
-    right: -300px;
+    width: 50%;
+    right: -50%;
     top: 0;
     padding: 0;
     margin: 0;
@@ -934,6 +934,14 @@ nav .menu #menu-back {
   .navbar-brand.logo {
     padding: 0;
   }
+
+  .row {
+    margin: 0;
+  }
+
+  .container {
+    padding-right: 0;
+  }
 }
 
 /* Retina Display Media Query */
@@ -941,4 +949,3 @@ nav .menu #menu-back {
 
   /* Retina-specific stuff here */
 }
-
