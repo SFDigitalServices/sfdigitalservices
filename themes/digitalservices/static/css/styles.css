@@ -925,6 +925,15 @@ nav .menu #menu-back {
   nav #ham {
     display: block;
   }
+
+  .logo img {
+    width: 60%;
+    margin: 0;
+  }
+
+  .navbar-brand.logo {
+    padding: 0;
+  }
 }
 
 /* Retina Display Media Query */
