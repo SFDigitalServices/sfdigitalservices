@@ -652,7 +652,7 @@ body.job-description p {
 
 footer {
   z-index: 10000;
-  position: absolute;
+  /*position: absolute;*/
   background-color: #26292E;
   float: none;
   width: 100%;
@@ -926,21 +926,25 @@ nav .menu #menu-back {
     display: block;
   }
 
+  nav .nav-right {
+    /*margin-right: 15px;*/
+  }
+
   .logo img {
     width: 60%;
     margin: 0;
   }
 
   .navbar-brand.logo {
-    padding: 0;
+    padding: 0 0 0 15px;
   }
 
   .row {
     margin: 0;
   }
 
-  .container {
-    padding-right: 0;
+  nav .container {
+    padding: 0;
   }
 }
 
