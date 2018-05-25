@@ -333,33 +333,39 @@ h6.separator-quote-3 a{
   text-shadow: 1px 1px 1px #041A2E;  
 }
 
-/* About */
+/* About, Our Team */
 #about,
 #participate {
   margin: 20px 0px 60px 0px;
 }
-.about-box {
+.about-box,
+.team-box {
   margin-top: 30px;
   text-align: center;
 }
-.about-box ol {
+.about-box ol,
+.team-box ol {
   padding-left: 30px;
 }
-.about-box ol li {
+.about-box ol li, 
+.team-box ol li{
   padding-left: 10px;
 }
 
-.about-body {
+.about-body,
+.team-body {
   padding: 0 0;
   text-align: center;
 }
 
-.about-body ol {
+.about-body ol,
+.team-body ol {
   padding-left: 15px;
   margin-top: 1.5em;
 }
 
-.about-body ol li {
+.about-body ol li,
+.team-body ol li {
   padding-left: 10px;
   padding-bottom: .5em;
 }
@@ -368,10 +374,12 @@ h6.separator-quote-3 a{
   margin-top: 2em;
 }
 
-.about-body p{
+.about-body p,
+.team-body p {
   text-align: justify;
   padding-top:10px;
 }
+#about .sub-heading,
 #about .sub-heading {
   text-align: center;
   line-height: 2;
@@ -382,7 +390,13 @@ h6.separator-quote-3 a{
   height: 400px;
   background-color: #0082ed;
 }
-.values-img{
+
+#staff {
+  background-color: #0082ed;
+}
+
+.values-img,
+.staff-img {
   margin: 0;
   padding: 0;
 }
@@ -390,22 +404,98 @@ h6.separator-quote-3 a{
   min-height: 400px;
   overflow: hidden;
 }
-.values-body{
+.values-body,
+.staff-body {
   padding: 14px 30px 20px 0px;
-  min-height: 100%;
+  min-height: 150%;
   background-color: #0082ed;
 }
-.values-body h2{
+.values-body h2,
+.staff-body h2 {
   text-align: left;
   padding-left: 40px;
   color: #fff;
 }
-.values-body li{
+.values-body li,
+.staff-body li {
   color: #fff;
   list-style: none;
   font-size: 1.15em;
   padding-bottom: 7px;
 }
+
+.staff-body ul,
+.team-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center
+}
+
+.staff-body ul ul,
+.team-body ul ul {
+  list-style: none;
+  padding: 0;
+  margin: .875em 0 2em 0;
+  text-align: center
+}
+
+.staff-body ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+
+  .staff-body ul li {
+    float: left;
+    width: 32.7%;
+  }
+
+  .staff-body ul li ul li {
+    float: none;
+  }
+
+
+
+.staff-body img {
+  border-radius: 50%;
+  border: solid 3px #fff;
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  background-color: #FFF;
+}
+
+.team-body img {
+  border-radius: 50%;
+  border: solid 3px #0082ed;
+  width: 250px;
+  height: 250px;
+}
+
+.staff-body ul,
+.team-body ul {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.staff-body ul ul li,
+.team-body ul ul li  {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: .875em;
+  text-transform: uppercase;
+}
+
+.staff-body ul ul li:first-of-type, 
+.team-body ul ul li:first-of-type {
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
 .values-body li strong{
   font-size: 1.25em;
   color: #0A3764;
@@ -750,10 +840,18 @@ footer ul {
 /* -------------------- Large screens -------------------- */
 @media only screen and (min-width : 1680px) {
 
+
+
+
 }
 
 /* -------------------- Tablet Landscape -------------------- */
- @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  .staff-body ul li {
+    float: left;
+    widht: 32.7%;
+  }
   
 }
 
@@ -807,6 +905,12 @@ footer ul {
     padding-right: 5%;
     font-size: 1.5em;
   }
+    
+  .staff-body ul li {
+    float: left;
+    widht: 45%;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -818,6 +922,10 @@ footer ul {
 
 /* -------------------- Tablet Portrait Size -------------------- */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+
+
+
+
 
 }
 
