@@ -385,18 +385,14 @@ h6.separator-quote-3 a{
   line-height: 2;
 }
 
-/* Values */
+/*-- Values --*/
+
 .values-box {
   height: 400px;
   background-color: #0082ed;
 }
 
-#staff {
-  background-color: #0082ed;
-}
-
-.values-img,
-.staff-img {
+.values-img {
   margin: 0;
   padding: 0;
 }
@@ -404,68 +400,44 @@ h6.separator-quote-3 a{
   min-height: 400px;
   overflow: hidden;
 }
-.values-body,
-.staff-body {
+.values-body {
   padding: 14px 30px 20px 0px;
-  min-height: 150%;
+  min-height: 1550%;
   background-color: #0082ed;
 }
-.values-body h2,
-.staff-body h2 {
+.values-body h2 {
   text-align: left;
   padding-left: 40px;
   color: #fff;
 }
-.values-body li,
-.staff-body li {
+.values-body li {
   color: #fff;
   list-style: none;
   font-size: 1.15em;
   padding-bottom: 7px;
 }
 
-.staff-body ul,
+.values-body li strong{
+  font-size: 1.25em;
+  color: #0A3764;
+}
+
+/* Our Work-Team -----*/
+
 .team-body ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center
+  text-align: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
-.staff-body ul ul,
 .team-body ul ul {
   list-style: none;
   padding: 0;
   margin: .875em 0 2em 0;
   text-align: center
-}
-
-.staff-body ul li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-
-  .staff-body ul li {
-    float: left;
-    width: 32.7%;
-  }
-
-  .staff-body ul li ul li {
-    float: none;
-  }
-
-
-
-.staff-body img {
-  border-radius: 50%;
-  border: solid 3px #fff;
-  width: 100%;
-  height: 100%;
-  max-height: 200px;
-  background-color: #FFF;
 }
 
 .team-body img {
@@ -475,31 +447,99 @@ h6.separator-quote-3 a{
   height: 250px;
 }
 
-.staff-body ul,
-.team-body ul {
-  margin-top: 4em;
-  margin-bottom: 4em;
-}
-
-.staff-body ul ul li,
 .team-body ul ul li  {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: .875em;
-  text-transform: uppercase;
-}
-
-.staff-body ul ul li:first-of-type, 
-.team-body ul ul li:first-of-type {
-  font-weight: bold;
   font-size: 1em;
-  text-transform: capitalize;
 }
 
-.values-body li strong{
-  font-size: 1.25em;
-  color: #0A3764;
+.team-body ul ul li.name  {
+  font-size: 1.5em;
+  font-weight: bold;
 }
+
+.team-body ul ul li.name  {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Our Team --*/
+
+#staff {
+  background-color: #0082ed;
+}
+
+.staff-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 5em 0 1em 0;
+}
+
+.staff-body ul li {
+  height: auto;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+.staff-body ul ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.staff-body ul li ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  min-height: 0;
+  color: #fff;
+}
+
+.staff-body ul li ul li a {
+  color: #fff;
+}
+
+
+.staff-body ul li ul li.img {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.staff-body ul li ul li.name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.staff-body li.img img {
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: solid 3px #fff;
+  background-color: #FFF;
+  width: 100%;
+  height: 100%;
+}
+
+.values-box .values-img img{
+  min-height: 400px;
+  overflow: hidden;
+}
+.staff-body {
+  padding: 14px 30px 20px 0px;
+  min-height: 1550%;
+  background-color: #0082ed;
+}
+.staff-body h2 {
+  text-align: left;
+  padding-left: 40px;
+  color: #fff;
+}
+
+/* end Our Work Staff-----*/
 
 
 #roadmap .sub-heading {
@@ -905,11 +945,6 @@ footer ul {
     padding-right: 5%;
     font-size: 1.5em;
   }
-    
-  .staff-body ul li {
-    float: left;
-    widht: 45%;
-  }
 
 }
 
@@ -922,6 +957,8 @@ footer ul {
 
 /* -------------------- Tablet Portrait Size -------------------- */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+
+
 
 
 
@@ -991,6 +1028,8 @@ nav .menu #menu-back {
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .about-body p{text-align: center;}
   .roadmap-body p {text-align: center;}
+
+
 }
 
 /* -------------------- Mobile Portrait -------------------- */
