@@ -402,7 +402,7 @@ h6.separator-quote-3 a{
 }
 .values-body {
   padding: 14px 30px 20px 0px;
-  min-height: 1550%;
+  min-height: 100%;
   background-color: #0082ed;
 }
 .values-body h2 {
@@ -466,7 +466,7 @@ h6.separator-quote-3 a{
 /* Our Team --*/
 
 #staff {
-  background-color: #0082ed;
+  background-color: #3295e6;
 }
 
 .staff-body ul {
@@ -531,7 +531,6 @@ h6.separator-quote-3 a{
 .staff-body {
   padding: 14px 30px 20px 0px;
   min-height: 1550%;
-  background-color: #0082ed;
 }
 .staff-body h2 {
   text-align: left;
