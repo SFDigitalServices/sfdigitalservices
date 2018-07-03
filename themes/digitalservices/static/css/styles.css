@@ -80,7 +80,7 @@ h6 {
 }
 p {
   color: #393939;
-  font-size: 1.25em;
+  font-size: 1.15em;
   line-height: 1.5em;
 }
 ol{
@@ -272,7 +272,18 @@ button:active {
   margin-top: 20px;
   background: #0082ed center center fixed;
 }
-h3.separator-quote-1 {
+.quote-photo img {
+  width: 275px;
+  height: auto;
+  display: block;
+  margin: 3em auto 2em;
+  padding: 0;
+  border-radius: 50%;
+  border: solid 3px #fff;
+  background-color: #FFF;
+  height: auto;
+}
+p.separator-quote-1 {
   padding-top: 40px;
   padding-bottom: .75em;
   text-align: left;
@@ -282,12 +293,18 @@ h3.separator-quote-1 {
   line-height: 1.4;
   text-transform: none;
 }
+p.separator-quote-2 {
+  text-align: left;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.5em;
+}
 h3.separator-quote-2 {
   text-align: right;
   color: #fff;
   font-weight: 700;
 }
-h6.separator-quote-3 {
+p.separator-quote-3 {
   padding-top: 5px;
   padding-bottom: 15px;
   text-align: right;
@@ -339,33 +356,33 @@ h6.separator-quote-3 a{
   margin: 20px 0px 60px 0px;
 }
 .about-box,
-.team-box {
+.staff-body {
   margin-top: 30px;
   text-align: center;
 }
 .about-box ol,
-.team-box ol {
+.staff-body ol {
   padding-left: 30px;
 }
 .about-box ol li, 
-.team-box ol li{
+.staff-body ol li{
   padding-left: 10px;
 }
 
 .about-body,
-.team-body {
+.staff-body {
   padding: 0 0;
   text-align: center;
 }
 
 .about-body ol,
-.team-body ol {
+.staff-body ol {
   padding-left: 15px;
   margin-top: 1.5em;
 }
 
 .about-body ol li,
-.team-body ol li {
+.staff-body ol li {
   padding-left: 10px;
   padding-bottom: .5em;
 }
@@ -424,7 +441,8 @@ h6.separator-quote-3 a{
 
 /* Our Work-Team -----*/
 
-.team-body ul {
+.staff-body ul,
+.staff-featured ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -433,32 +451,53 @@ h6.separator-quote-3 a{
   margin-bottom: 4em;
 }
 
-.team-body ul ul {
+ul.staff-featured {
+  margin: 5em 0 3em 0;
+  padding: 0;
+}
+
+.staff-body ul ul {
   list-style: none;
   padding: 0;
   margin: .875em 0 2em 0;
-  text-align: center
+  text-align: center;
 }
 
-.team-body img {
+ul.staff-featured ul {
+  list-style: none;
+  padding: 0;
+  margin: .875em 0 2em 0;
+  text-align: center;
+}
+
+ul.staff-featured li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+ul.staff-featured li.name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: .75em;
+}
+
+.staff-body img,
+.staff-featured img {
   border-radius: 50%;
   border: solid 3px #0082ed;
   width: 250px;
   height: 250px;
 }
 
-.team-body ul ul li  {
+.staff-body ul ul li  {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1em;
 }
 
-.team-body ul ul li.name  {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.team-body ul ul li.name  {
+.staff-body ul ul li.name  {
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -514,7 +553,8 @@ h6.separator-quote-3 a{
   font-weight: bold;
 }
 
-.staff-body li.img img {
+.staff-body li.img img,
+.staff-featured li.img img {
   margin: 0;
   padding: 0;
   border-radius: 50%;
@@ -887,7 +927,8 @@ footer ul {
 /* -------------------- Tablet Landscape -------------------- */
  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
-  .staff-body ul li {
+  .staff-body ul li,
+  .staff-featured ul li {
     float: left;
     widht: 32.7%;
   }
@@ -1028,7 +1069,6 @@ nav .menu #menu-back {
   .about-body p{text-align: center;}
   .roadmap-body p {text-align: center;}
 
-
 }
 
 /* -------------------- Mobile Portrait -------------------- */
@@ -1098,4 +1138,11 @@ nav .menu #menu-back {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 
   /* Retina-specific stuff here */
+}
+
+/* col-med break */
+@media only screen and (min-width: 992px) {
+  .naomi-quote {
+    margin-top: 6em;
+  }
 }
