@@ -790,55 +790,58 @@ body.job-description p {
   padding-left: 0px;
 }
 
-.fr_error, .fr_required {
-    text-decoration: none; 
-    border-bottom: none!important;  
+.contact-form .fr_error,
+.contact-form .fr_required {
+  text-decoration: none; 
+  border-bottom: none;  
 }
 
-.fr_text.size_medium {
-    font-size: 15px;   
+.contact-form .fr_text.size_medium {
+  font-size: 15px;   
 }
 
 .contact-form input,
 .contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px 13px 10px 13px;
-    font-size: 19px;
-    line-height: 1.4em;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    font-weight: 400;
-    font-family: Helvetica, Arial, sans-serif;
-    border-radius: 0px;
-    border: 3px solid #e2e2e2;
-    background: transparent;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    color: #393939 !important;
+.contact-form textarea.size_medium {
+  width: 100%;
+  padding: 12px 13px 10px 13px;
+  font-size: 19px;
+  line-height: 1.4em;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 0px;
+  border: 3px solid #e2e2e2;
+  background: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  color: #393939;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: none !important;
-  border: 3px solid #0082ed !important;
-  box-shadow: none !important;
-}
-.fr_response_field_text input.size_medium,
-.fr_response_field_id input,
-.fr_response_field_website input,
-.fr_response_field_paragraph textarea {
-    width:100% !important;
+  outline: none;
+  border: 3px solid #0082ed;
+  box-shadow: none;
 }
 
-.fr_bottom {
-    background:transparent !important;
+.contact-form .fr_response_field_text input.size_medium,
+.contact-form .fr_response_field_id input,
+.contact-form .fr_response_field_email input,
+.contact-form .fr_response_field_website input,
+.contact-form .fr_response_field_paragraph textarea.size_medium {
+  width:100%;
 }
 
-.fr_text.size_medium {
-    margin-top:2em;
+.contact-form .fr_bottom {
+  background:transparent;
+}
+
+.contact-form .fr_text.size_medium {
+  margin-top:2em;
 }
 
 /* End: Join us and email subscribe*/
