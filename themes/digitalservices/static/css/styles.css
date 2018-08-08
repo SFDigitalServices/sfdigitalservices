@@ -838,6 +838,11 @@ body.job-description p {
 
 .contact-form .fr_bottom {
   background:transparent;
+  padding: 0px;
+}
+
+.contact-form .fr_bottom .btn-custom2 {
+  width: 100%
 }
 
 .contact-form .fr_text.size_medium {
