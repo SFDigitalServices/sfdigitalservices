@@ -1112,8 +1112,8 @@ ul.left-aligned {
   max-width: 100%;
 }
 
-.sfgov-about-content img {
-  /* max-width: 50%; */
+.sfgov-about img {
+  margin: 30px 0;
 }
 
 .sfgov-about h2.sub-heading {
