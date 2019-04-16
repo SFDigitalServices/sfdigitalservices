@@ -1125,6 +1125,10 @@ ul.left-aligned {
   margin: 0 auto;
 }
 
+.sfgov-about p {
+  text-align: left;
+}
+
 /* -------------------- Mobile Landscape -------------------- */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .about-body p{text-align: center;}
