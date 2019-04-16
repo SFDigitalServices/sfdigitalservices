@@ -1133,7 +1133,7 @@ ul.left-aligned {
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .about-body p{text-align: center;}
   .roadmap-body p {text-align: center;}
-
+  .sfgov-about .about-body p { text-align: left; }
 }
 
 /* -------------------- Mobile Portrait -------------------- */
@@ -1141,6 +1141,8 @@ ul.left-aligned {
   .about-body p {
     text-align: center;
   }
+
+  .sfgov-about .about-body p { text-align: left; }
 }
 
 @media only screen and (max-width: 767px) {
