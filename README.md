@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SFDigitalServices/sfdigitalservices.github.io.svg?branch=source)](https://travis-ci.org/SFDigitalServices/sfdigitalservices.github.io)
+
 # Build locally
 ## Get Hugo
 ### via homebrew:
