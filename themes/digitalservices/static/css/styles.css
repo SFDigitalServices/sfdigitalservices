@@ -945,6 +945,21 @@ footer ul {
   text-align: left;
 }
 
+.job-description ul {
+  text-align: left;
+}
+
+.job-description ul > li > ul {
+  padding-left: 20px;
+  margin-top: 20px;
+  font-size: inherit;
+  list-style-type: circle;
+}
+
+.job-description ul > li > ul > li {
+  font-size: inherit;
+}
+
 /* 20.Media-Query
 -------------------------------------------------------------- */
 
