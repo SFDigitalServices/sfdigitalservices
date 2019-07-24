@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    branches:
+      ignore:
+        - gh-pages
+
+    docker:
+      - image: cibuilds/hugo:latest
+
+    working_directory: ~/hugo
+
+    environment:
+      - HUGO_BUILD_DIR: ~/hugo/public
+      - SOURCE_BRANCH: master
+      - TARGET_BRANCH: gh-pages
+
+    steps:
+      - checkout
+
