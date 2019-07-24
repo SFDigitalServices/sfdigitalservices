@@ -5,7 +5,7 @@ set -eo pipefail
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
 
   cd ..
-  
+
   git config --global user.email $GH_EMAIL
   git config --global user.name $GH_NAME
 
@@ -25,5 +25,9 @@ if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
   git commit -m "Automated deploy to gh pages: ${CIRCLE_SHA1}" --allow-empty
 
   git push origin $TARGET_BRANCH
+
+  # also push to pantheon remote
+  git remote add pantheon $PANTHEON_REMOTE
+  git push -f pantheon gh-pages:master
 
 fi
