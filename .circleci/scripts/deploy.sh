@@ -28,6 +28,11 @@ if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
 
   # also push to pantheon remote
   git remote add pantheon $PANTHEON_REMOTE
+
+  # use the right ssh key
+  ssh-add -D
+  ssh-add ~/.ssh/id_rsa_$PANTHEON_SSH_FINGERPRINT
+  ssh-keyscan -H -p $PANTHEON_CODESERVER_PORT $PANTHEON_CODESERVER >> ~/.ssh/known_hosts
   git push -f pantheon gh-pages:master
 
 fi
