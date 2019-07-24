@@ -4,6 +4,8 @@ set -eo pipefail
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
 
+  cd ..
+  
   git config --global user.email $GH_EMAIL
   git config --global user.name $GH_NAME
 
