@@ -18,3 +18,7 @@ jobs:
     steps:
       - checkout
 
+      - run:
+        name: Run hugo
+        command: HUGO_ENV=production hugo -v
+
