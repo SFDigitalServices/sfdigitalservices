@@ -19,6 +19,8 @@ jobs:
       - checkout
 
       - add_ssh_keys
+          fingerprints:
+            - "c9:7d:25:cc:9d:6f:ef:3e:a7:ad:2b:5a:04:35:35:b3"
 
       - run:
           name: Run hugo
