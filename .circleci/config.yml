@@ -22,3 +22,7 @@ jobs:
           name: Run hugo
           command: HUGO_ENV=production hugo -v
 
+      - deploy:
+          name: Deploy
+          command: ./.circleci/scripts/deploy.sh
+
