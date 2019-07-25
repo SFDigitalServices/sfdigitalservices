@@ -30,7 +30,8 @@ git push -f pantheon $CIRCLE_BRANCH:ci-$CIRCLE_BUILD_NUM
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
   # merge multidev to master
-  terminus multidev:merge-to-dev $PANTHEON_SITENAME.ci-$CIRCLE_BUILD_NUM
+  # terminus multidev:merge-to-dev $PANTHEON_SITENAME.ci-$CIRCLE_BUILD_NUM
+  git push -f pantheon $CIRCLE_BRANCH:master
   terminus multidev:delete --delete-branch $PANTHEON_SITENAME.ci-$CIRCLE_BUILD_NUM
 fi
 
