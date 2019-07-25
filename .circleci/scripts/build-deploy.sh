@@ -12,7 +12,6 @@ cd $CIRCLE_BRANCH
 git checkout $CIRCLE_BRANCH || git checkout --orphan $CIRCLE_BRANCH
 HUGO_ENV=production hugo -v
 git rm -rf .
-ls -al
 mv public/* .
 git add -A
 git commit -m "build ${CIRCLE_BRANCH} to pantheon remote ci-${CIRCLE_BUILD_NUM}: ${CIRCLE_SHA1}" --allow-empty
