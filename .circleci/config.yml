@@ -13,7 +13,7 @@ jobs:
     environment:
       - SOURCE_BRANCH: master
       - TARGET_BRANCH: gh-pages
-      TERM: dumb
+      - TERM: dumb
 
     steps:
       - checkout
