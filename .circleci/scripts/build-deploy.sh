@@ -10,7 +10,7 @@ git config --global user.name $GH_NAME
 git clone $CIRCLE_REPOSITORY_URL $CIRCLE_BRANCH
 cd $CIRCLE_BRANCH
 git checkout $CIRCLE_BRANCH || git checkout --orphan $CIRCLE_BRANCH
-hugo
+HUGO_ENV=production hugo -v
 git rm -rf .
 mv public/* .
 git add -A
@@ -26,3 +26,8 @@ ssh-add ~/.ssh/id_rsa_$PANTHEON_SSH_FINGERPRINT
 ssh-keyscan -H -p $PANTHEON_CODESERVER_PORT $PANTHEON_CODESERVER >> ~/.ssh/known_hosts
 
 git push -f pantheon $CIRCLE_BRANCH:ci-$CIRCLE_BUILD_NUM
+
+if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
+  # merge multidev to master
+  terminus multidev:merge-to-dev $PANTHEON_SITENAME.ci-$CIRCLE_BUILD_NUM
+fi

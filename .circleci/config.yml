@@ -11,7 +11,6 @@ jobs:
     working_directory: ~/hugo
 
     environment:
-      - HUGO_BUILD_DIR: ~/hugo/public
       - SOURCE_BRANCH: master
       - TARGET_BRANCH: gh-pages
 
@@ -40,15 +39,6 @@ jobs:
             curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 
       - run:
-          name: Build
-          command: ./.circleci/scripts/build.sh
-            
-
-      - run:
-          name: Run hugo
-          command: HUGO_ENV=production hugo -v
-
-      # - deploy:
-      #     name: Deploy
-      #     command: ./.circleci/scripts/deploy.sh
+          name: Build and deploy
+          command: ./.circleci/scripts/build-deploy.sh
 
