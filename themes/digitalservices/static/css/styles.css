@@ -8,10 +8,10 @@
 /*.row {
   padding-bottom: 30px;
 }*/
-.center {
+.center, .center p {
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: center !important;
 }
 .hide {
   display: none;
@@ -29,13 +29,13 @@ body {
   font-size: 14px;
 }
 
-.blur { 
-    -webkit-filter: blur(3px); 
-    -moz-filter: blur(3px); 
-    filter: blur(3px); 
+.blur {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    filter: blur(3px);
 }
 
-.overlay { 
+.overlay {
   z-index: 1;
   position: absolute;
   height: 650px;
@@ -176,7 +176,7 @@ button:active {
   font-family: 'Lato', sans-serif;
   -moz-box-shadow:    -.5px .5px 6px 0px rgba(0,0,0,.5);
   -webkit-box-shadow: -.5px .5px 6px 0px rgba(0,0,0,.5);
-  box-shadow:         -.5px .5px 6px 0px rgba(0,0,0,.5); 
+  box-shadow:         -.5px .5px 6px 0px rgba(0,0,0,.5);
 }
 .nav-right {
   float: right;
@@ -208,7 +208,7 @@ button:active {
   background-color: #0082ed;
   text-decoration: none;
   color: #13487D;
-} 
+}
 .navbar-toggle:hover {
   background-color: #0082ed!important;
   color: #fff;
@@ -342,12 +342,12 @@ h6.separator-quote-3 a{
 }
 .main h3 {
   font-weight: 800;
-  text-shadow: 1px 1px 1px #041A2E;  
+  text-shadow: 1px 1px 1px #041A2E;
 }
 .title {
   font-size: 3.5em;
   font-weight: 500;
-  text-shadow: 1px 1px 1px #041A2E;  
+  text-shadow: 1px 1px 1px #041A2E;
 }
 
 /* About, Our Team */
@@ -364,7 +364,7 @@ h6.separator-quote-3 a{
 .staff-body ol {
   padding-left: 30px;
 }
-.about-box ol li, 
+.about-box ol li,
 .staff-body ol li{
   padding-left: 10px;
 }
@@ -586,7 +586,7 @@ ul.staff-featured li.name {
   line-height: 2;
 }
 .roadmap-body p {
-  margin-top:50px; 
+  margin-top:50px;
   text-align: justify;
 }
 .roadmap-content{
@@ -757,7 +757,7 @@ body.jobs #roadmap {
 
 body.jobs p,
 body.job-description p {
-  text-align: left !important;
+  text-align: left;
 }
 
 /* Contact info */
@@ -792,12 +792,12 @@ body.job-description p {
 
 .contact-form .fr_error,
 .contact-form .fr_required {
-  text-decoration: none; 
-  border-bottom: none;  
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .contact-form .fr_text.size_medium {
-  font-size: 15px;   
+  font-size: 15px;
 }
 
 .contact-form input,
@@ -885,7 +885,7 @@ footer ul {
 .footer-links a:hover{
   color: #0082ed;
 }
-.social { 
+.social {
   margin-top: 15px;
 }
 .social i{
@@ -979,7 +979,7 @@ footer ul {
     float: left;
     widht: 32.7%;
   }
-  
+
 }
 
 /* -------------------- Smaller than 960px -------------------- */
@@ -1055,7 +1055,7 @@ footer ul {
 
 
 /* -------------------- All Mobile Sizes -------------------- */
-@media only screen and (max-width: 767px) { 
+@media only screen and (max-width: 767px) {
   #map {max-height: 250px;}
   .btn-custom { font-size: .8em; background: #0082ed; }
   .btn-custom2 { font-size: .8em; }
