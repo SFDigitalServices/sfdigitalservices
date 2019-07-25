@@ -16,7 +16,13 @@ mv public/* .
 git add -A
 git commit -m "build ${CIRCLE_BRANCH} to pantheon: ${CIRCLE_SHA1}" --allow-empty
 
+git remote add pantheon $PANTHEON_REMOTE
+
 terminus -n auth:login --machine-token="$TERMINUS_MACHINE_TOKEN"
 terminus multidev:create $PANTHEON_SITENAME.dev ci-$CIRCLE_BUILD_NUM
 
-git push -f pantheon test-branch:ci-$CIRCLE_BUILD_NUM
+ssh-add -D
+ssh-add ~/.ssh/id_rsa_$PANTHEON_SSH_FINGERPRINT
+ssh-keyscan -H -p $PANTHEON_CODESERVER_PORT $PANTHEON_CODESERVER >> ~/.ssh/known_hosts
+
+git push -f pantheon $CIRCLE_BRANCH:ci-$CIRCLE_BUILD_NUM
