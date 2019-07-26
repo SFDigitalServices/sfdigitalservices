@@ -29,6 +29,5 @@ else
   terminus -n auth:login --machine-token="$TERMINUS_MACHINE_TOKEN"
   terminus multidev:create $PANTHEON_SITENAME.dev ci-$CIRCLE_BUILD_NUM
   git push -f pantheon $CIRCLE_BRANCH:ci-$CIRCLE_BUILD_NUM
-  terminus multidev:delete --delete-branch $PANTHEON_SITENAME.ci-$CIRCLE_BUILD_NUM -y
   terminus auth:logout
 fi
