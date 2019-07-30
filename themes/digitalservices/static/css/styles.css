@@ -250,14 +250,14 @@ button:active {
 #background-image {
   height: 500px;
   width: 100%;
-  background: #fefefe center -100px fixed;
+  background: #fefefe center -50px fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .jobs div#background-image {
-    background-position: center -350px;
+    background-position: center -250px;
 }
 .color-overlay{
   z-index: 10;
@@ -1018,7 +1018,7 @@ footer ul {
 
 /* -------------------- Smaller than 960px -------------------- */
 @media only screen and (max-width: 991px) {
-  #background-image {height: 400px; background: #0082ed center 20% no-repeat;}
+  #background-image {height: 400px; background: #0082ed center -120px no-repeat;}
   .jobs div#background-image {
     background-position: center -250px;
   }
