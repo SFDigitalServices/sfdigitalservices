@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/SFDigitalServices/sfdigitalservices.github.io.svg?branch=source)](https://travis-ci.org/SFDigitalServices/sfdigitalservices.github.io)
+[![CircleCI](https://circleci.com/gh/SFDigitalServices/sfdigitalservices.svg?style=svg)](https://circleci.com/gh/SFDigitalServices/sfdigitalservices)
 
 # Build locally
 ## Get Hugo
