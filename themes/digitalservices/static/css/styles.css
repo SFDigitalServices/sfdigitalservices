@@ -250,14 +250,14 @@ button:active {
 #background-image {
   height: 500px;
   width: 100%;
-  background: #fefefe center -80px fixed;
+  background: #fefefe center -200px fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .jobs div#background-image {
-    background-position: center -250px;
+    background-position: center -350px;
 }
 .color-overlay{
   z-index: 10;
@@ -346,7 +346,7 @@ h6.separator-quote-3, h6.separator-quote-3 a{
 
 .main {
   z-index: 10;
-  top: 50%;
+  top: 550px;
   width: 100%;
   position: absolute;
   text-align: center;
@@ -366,7 +366,7 @@ h6.separator-quote-3, h6.separator-quote-3 a{
 
 /* Our team specific style for .main */
 .our-team .main {
-    top: 18%;
+    top: 15%;
 }
 
 .our-team .title {
@@ -381,7 +381,7 @@ h6.separator-quote-3, h6.separator-quote-3 a{
 /* About, Our Team */
 #about,
 #participate {
-  margin: 220px 0px 60px 0px;
+  margin: 250px 0px 60px 0px;
 }
 .about-box,
 .staff-body {
@@ -433,7 +433,7 @@ h6.separator-quote-3, h6.separator-quote-3 a{
 
 .values-box {
   height: 400px;
-  background-color: #0082ed;
+  background-color: #edf4f7;
 }
 
 .values-img {
@@ -1019,6 +1019,9 @@ footer ul {
 /* -------------------- Smaller than 960px -------------------- */
 @media only screen and (max-width: 991px) {
   #background-image {height: 400px; background: #0082ed center 20% no-repeat;}
+  .jobs div#background-image {
+    background-position: center -250px;
+  }
   .color-overlay{height: 400px;}
   .overlay{height: 400px;}
   .values-box {
@@ -1066,11 +1069,8 @@ footer ul {
     padding-right: 5%;
     font-size: 1.5em;
   }
-  .our-team .main {
-    top: 15%;
-  }
   .main {
-    top:42%;
+    top:450px;
   }
   .title {
     font-size: 3.5em;
@@ -1087,7 +1087,9 @@ footer ul {
 
 /* -------------------- Tablet Portrait Size -------------------- */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-
+.our-team .main {
+    top: 12%;
+  }
 
 
 
@@ -1121,7 +1123,11 @@ footer ul {
     padding: 2%;
   }
   .our-team .main {
-      top: 20%;
+      top: 10%;
+  }
+  #about,
+  #participate {
+    margin: 180px 0px 60px 0px;
   }
   .contact-form {
     width: 100%;
@@ -1214,6 +1220,7 @@ ul.left-aligned {
 /* -------------------- Mobile Portrait -------------------- */
 @media only screen and (max-width: 479px) {
   .sfgov-about .about-body p { text-align: left; }
+    #about, #participate {margin: 250px 0px 60px 0px;}
 }
 
 @media only screen and (max-width: 767px) {
