@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {{ if not .Site.IsServer }}
+        <script>
+            if(window.location.protocol.indexOf('https') < 0) window.location.href = 'https://' + window.location.href;
+        </script>
+    {{ end }}
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
     window.dataLayer = window.dataLayer || [];
