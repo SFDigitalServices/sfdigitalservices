@@ -250,7 +250,7 @@ button:active {
 #background-image {
   height: 500px;
   width: 100%;
-  background: #fefefe center -200px fixed;
+  background: #fefefe center -100px fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -366,7 +366,7 @@ h6.separator-quote-3, h6.separator-quote-3 a{
 
 /* Our team specific style for .main */
 .our-team .main {
-    top: 15%;
+    top: 200px;
 }
 
 .our-team .title {
@@ -1087,12 +1087,6 @@ footer ul {
 
 /* -------------------- Tablet Portrait Size -------------------- */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-.our-team .main {
-    top: 12%;
-  }
-
-
-
 
 
 
@@ -1123,7 +1117,7 @@ footer ul {
     padding: 2%;
   }
   .our-team .main {
-      top: 10%;
+      top: 160px;
   }
   #about,
   #participate {
