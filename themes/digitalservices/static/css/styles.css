@@ -380,7 +380,7 @@ h6.separator-quote-3, h6.separator-quote-3 a{
 
 /* About, Our Team */
 #about {
-  margin: 250px 0px 60px 0px;
+  margin: 250px auto 60px;
 }
 .about-box,
 .staff-body {
