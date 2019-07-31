@@ -38,9 +38,9 @@ body {
 .overlay {
   z-index: 1;
   position: absolute;
-  height: 650px;
+  height: 500px;
   width: 100%;
-  background: rgba(0, 0, 100, .25);
+  background: rgba(28,62,87,.7);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -379,8 +379,7 @@ h6.separator-quote-3, h6.separator-quote-3 a{
 }
 
 /* About, Our Team */
-#about,
-#participate {
+#about {
   margin: 250px 0px 60px 0px;
 }
 .about-box,
