@@ -22,6 +22,7 @@ git remote add pantheon $PANTHEON_REMOTE
 git add -A
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
+  mkdir -p $CIRCLE_BRANCH/.circleci && cp -a .circleci/. $CIRCLE_BRANCH/.circleci/. # copy circleci config to ignore triggering builds when pushing to gh-pages
   git commit -m "build ${CIRCLE_BRANCH} to pantheon: ${CIRCLE_SHA1}" --allow-empty
   git push -f pantheon $CIRCLE_BRANCH:master
   git push -f origin $CIRCLE_BRANCH:gh-pages
