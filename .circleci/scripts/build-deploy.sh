@@ -16,14 +16,16 @@ ssh-keyscan -H -p $PANTHEON_CODESERVER_PORT $PANTHEON_CODESERVER >> ~/.ssh/known
 cd $CIRCLE_BRANCH
 git checkout $CIRCLE_BRANCH || git checkout --orphan $CIRCLE_BRANCH
 HUGO_ENV=production hugo -v
-git rm -rf .
-mv public/* .
+mkdir -p ../tmp/.circleci && cp -a .circleci/. ../tmp/.circleci/. # copy circleci config to tmp dir
+git rm -rf . # remove everything
+mv public/* . # move hugo generated files into root of branch dir
+cp -a ../tmp/.circleci . # copy circleci config back to prevent triggering build on gh-pages
+
 git remote add pantheon $PANTHEON_REMOTE
 git add -A
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
-  mkdir -p $CIRCLE_BRANCH/.circleci && cp -a .circleci/. $CIRCLE_BRANCH/.circleci/. # copy circleci config to ignore triggering builds when pushing to gh-pages
-  git commit -m "build ${CIRCLE_BRANCH} to pantheon: ${CIRCLE_SHA1}" --allow-empty
+  git commit -m "build ${CIRCLE_BRANCH} ${CIRCLE_SHA1}" --allow-empty
   git push -f pantheon $CIRCLE_BRANCH:master
   git push -f origin $CIRCLE_BRANCH:gh-pages
 else
