@@ -29,3 +29,16 @@ function resetMenu() {
     $('#menu').css({'height':'auto'});
   }, 300);
 }
+
+(function() {
+  $('#skip-link').click(function() {
+    $(window).scrollTop($('.main').position().top - $('.navbar-brand.logo img').height());
+    $('.main').focus();
+  });
+  $('#skip-link').on('focus', function() {
+    $(this).addClass('skip-link-active');
+  });
+  $('#skip-link').on('blur', function() {
+    $(this).removeClass('skip-link-active');
+  });
+})();

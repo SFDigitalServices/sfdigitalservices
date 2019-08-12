@@ -1144,6 +1144,21 @@ ul.left-aligned {
   text-align: left;
 }
 
+
+#skip-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.skip-link-active {
+  z-index: 10000;
+  color: #fff;
+}
+
+.skip-link-active:focus {
+  color: #fff;
+}
+
 /* -------------------- Mobile Landscape -------------------- */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .about-body p{text-align: center;}
