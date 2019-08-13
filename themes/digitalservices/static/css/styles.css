@@ -38,9 +38,9 @@ body {
 .overlay {
   z-index: 1;
   position: absolute;
-  height: 650px;
+  height: 500px;
   width: 100%;
-  background: rgba(0, 0, 100, .25);
+  background: rgba(28,62,87,.7);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -248,20 +248,23 @@ button:active {
 
 /* Main */
 #background-image {
-  height: 650px;
+  height: 500px;
   width: 100%;
-  background: #fefefe center center fixed;
+  background: #fefefe center -50px fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+.jobs div#background-image {
+    background-position: center -250px;
+}
 .color-overlay{
   z-index: 10;
   position: absolute;
-  height: 650px;
+  height: 500px;
   width: 100%;
-  background-color: rgba(0,144,255,.18);
+  background-color: rgba(28,62,87,.7);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -276,7 +279,7 @@ button:active {
   width: 275px;
   height: auto;
   display: block;
-  margin: 3em auto 2em;
+  margin: 2em auto 2em;
   padding: 0;
   border-radius: 50%;
   border: solid 3px #fff;
@@ -293,6 +296,13 @@ p.separator-quote-1 {
   line-height: 1.4;
   text-transform: none;
 }
+h3.separator-quote-1 {
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: initial;
+    line-height: 1.3;
+    padding-top: 35px;
+}
 p.separator-quote-2 {
   text-align: left;
   color: #fff;
@@ -305,16 +315,18 @@ h3.separator-quote-2 {
   font-weight: 700;
 }
 p.separator-quote-3 {
-  padding-top: 5px;
+  padding-top: 25px;
   padding-bottom: 15px;
   text-align: right;
   color: #fff;
   font-weight: 700;
 }
-h6.separator-quote-3 a{
-  color: #fff;
-  font-weight: 700;
+h6.separator-quote-3, h6.separator-quote-3 a{
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 35px;
 }
+
 #separator-image-2 {
   height: 350px;
   width: 100%;
@@ -334,30 +346,44 @@ h6.separator-quote-3 a{
 
 .main {
   z-index: 10;
-  top: 38%;
+  top: 550px;
   width: 100%;
   position: absolute;
   text-align: center;
-  color: #fefefe;
 }
 .main h3 {
-  font-weight: 800;
-  text-shadow: 1px 1px 1px #041A2E;
+  font-weight: 500;
+  text-transform: none;
+  color: #1c3e57;
+  line-height: 1.35;
 }
 .title {
-  font-size: 3.5em;
-  font-weight: 500;
-  text-shadow: 1px 1px 1px #041A2E;
+  font-size: 5em;
+  font-weight: 600;
+  text-transform: none;
+  color: #0082ed;
+}
+
+/* Our team specific style for .main */
+.our-team .main {
+    top: 200px;
+}
+
+.our-team .title {
+  color: #ffffff;
+}
+
+.our-team .main h3 {
+  color: #ffffff;
+  line-height: 1.35;
 }
 
 /* About, Our Team */
-#about,
-#participate {
-  margin: 20px 0px 60px 0px;
+#about {
+  margin: 250px auto 60px;
 }
 .about-box,
 .staff-body {
-  margin-top: 30px;
   text-align: center;
 }
 .about-box ol,
@@ -387,9 +413,9 @@ h6.separator-quote-3 a{
   padding-bottom: .5em;
 }
 
-.jobs .about-body {
+/*.jobs .about-body {
   margin-top: 2em;
-}
+}*/
 
 .about-body p,
 .team-body p {
@@ -399,14 +425,14 @@ h6.separator-quote-3 a{
 #about .sub-heading,
 #about .sub-heading {
   text-align: center;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 /*-- Values --*/
 
 .values-box {
   height: 400px;
-  background-color: #0082ed;
+  background-color: #edf4f7;
 }
 
 .values-img {
@@ -420,15 +446,15 @@ h6.separator-quote-3 a{
 .values-body {
   padding: 14px 30px 20px 0px;
   min-height: 100%;
-  background-color: #0082ed;
+  background-color: #edf4f7;
 }
 .values-body h2 {
   text-align: left;
   padding-left: 40px;
-  color: #fff;
+  color: #212123;
 }
 .values-body li {
-  color: #fff;
+  color: #212123;
   list-style: none;
   font-size: 1.15em;
   padding-bottom: 7px;
@@ -452,7 +478,7 @@ h6.separator-quote-3 a{
 }
 
 ul.staff-featured {
-  margin: 5em 0 3em 0;
+  margin: 5em 0;
   padding: 0;
 }
 
@@ -503,9 +529,12 @@ ul.staff-featured li.name {
 }
 
 /* Our Team --*/
+#team .container {
+    margin-top: 50px;
+} 
 
 #staff {
-  background-color: #3295e6;
+  background-color: #f1f1f1;
 }
 
 .staff-body ul {
@@ -517,7 +546,7 @@ ul.staff-featured li.name {
 .staff-body ul li {
   height: auto;
   margin: 0 auto;
-  min-height: 400px;
+  min-height: 350px;
 }
 
 .staff-body ul ul {
@@ -533,11 +562,11 @@ ul.staff-featured li.name {
   width: 100%;
   text-align: center;
   min-height: 0;
-  color: #fff;
+  color: #212123;
 }
 
 .staff-body ul li ul li a {
-  color: #fff;
+  color: #0082ed;
 }
 
 
@@ -546,6 +575,7 @@ ul.staff-featured li.name {
   height: 170px;
   margin: 0 auto;
   margin-bottom: 1em;
+  float: none;
 }
 
 .staff-body ul li ul li.name {
@@ -569,7 +599,7 @@ ul.staff-featured li.name {
   overflow: hidden;
 }
 .staff-body {
-  padding: 14px 30px 20px 0px;
+  /*padding: 14px 30px 20px 0px;*/
   min-height: 1550%;
 }
 .staff-body h2 {
@@ -580,7 +610,9 @@ ul.staff-featured li.name {
 
 /* end Our Work Staff-----*/
 
-
+#roadmap .col-xs-12.col-sm-10.col-sm-offset-1.col-md-6.col-md-offset-3 {
+    padding: 0;
+}
 #roadmap .sub-heading {
   text-align: center;
   line-height: 2;
@@ -605,6 +637,7 @@ ul.staff-featured li.name {
 .roadmap-photo img{
   width:120px;
 }
+
 
 
 /* Services */
@@ -757,7 +790,7 @@ body.jobs #roadmap {
 
 body.jobs p,
 body.job-description p {
-  text-align: left;
+  text-align: justify;
 }
 
 /* Contact info */
@@ -767,7 +800,7 @@ body.job-description p {
 
 #contact .sub-heading {
   text-align: center;
-  line-height: 2;
+  line-height: 1.5;
 }
 .contact {
   color: #393939;
@@ -974,19 +1007,22 @@ footer ul {
 /* -------------------- Tablet Landscape -------------------- */
  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
-  .staff-body ul li,
-  .staff-featured ul li {
+  .staff-body ul li {
     float: left;
-    widht: 32.7%;
+    width: 32.7%;
   }
+
 
 }
 
 /* -------------------- Smaller than 960px -------------------- */
 @media only screen and (max-width: 991px) {
-  #background-image {height: 600px; background: #0082ed top center no-repeat;}
-  .color-overlay{height: 600px;}
-  .overlay{height: 600px;}
+  #background-image {height: 400px; background: #0082ed center -120px no-repeat;}
+  .jobs div#background-image {
+    background-position: center -250px;
+  }
+  .color-overlay{height: 400px;}
+  .overlay{height: 400px;}
   .values-box {
     height: 500px;
     background-color: #0082ed;
@@ -1032,6 +1068,12 @@ footer ul {
     padding-right: 5%;
     font-size: 1.5em;
   }
+  .main {
+    top:450px;
+  }
+  .title {
+    font-size: 3.5em;
+  }
 
 }
 
@@ -1044,10 +1086,6 @@ footer ul {
 
 /* -------------------- Tablet Portrait Size -------------------- */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-
-
-
-
 
 
 
@@ -1073,6 +1111,27 @@ footer ul {
   .roadmap-photo{margin: 20px 0 10px -20px; text-align: center;}
   .roadmap-content h4{font-size: 1.3em;}
   h3.separator-quote-1 {padding-top: 20px;font-size: 1.3em;}
+  .main {
+    top: 420px;
+    padding: 2%;
+  }
+  .our-team .main {
+      top: 160px;
+  }
+  #about,
+  #participate {
+    margin: 180px 0px 60px 0px;
+  }
+  .contact-form {
+    width: 100%;
+    margin-left: 0;
+  }
+  .about-body p, .team-body p {
+      padding-top: 15px;
+  }
+  #team .container {
+    margin-top: 0;
+  }
 }
 
 nav .menu {
@@ -1161,18 +1220,15 @@ ul.left-aligned {
 
 /* -------------------- Mobile Landscape -------------------- */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .about-body p{text-align: center;}
+  .about-body p{text-align: left;}
   .roadmap-body p {text-align: center;}
   .sfgov-about .about-body p { text-align: left; }
 }
 
 /* -------------------- Mobile Portrait -------------------- */
 @media only screen and (max-width: 479px) {
-  .about-body p {
-    text-align: center;
-  }
-
   .sfgov-about .about-body p { text-align: left; }
+    #about, #participate {margin: 250px 0px 60px 0px;}
 }
 
 @media only screen and (max-width: 767px) {
@@ -1240,6 +1296,6 @@ ul.left-aligned {
 /* col-med break */
 @media only screen and (min-width: 992px) {
   .naomi-quote {
-    margin-top: 6em;
+    margin-top: 4em;
   }
 }
