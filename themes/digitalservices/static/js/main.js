@@ -38,8 +38,10 @@ function resetMenu() {
   });
   $('#skip-link').on('focus', function() {
     $(this).addClass('skip-link-active');
+    $('.navbar-brand.logo').css({'margin-left': (parseFloat($('.navbar-brand.logo').css('margin-left').replace('px','')) + $(this).width()) + 'px'})
   });
   $('#skip-link').on('blur', function() {
     $(this).removeClass('skip-link-active');
+    $('.navbar-brand.logo').attr('style', '');
   });
 })();
