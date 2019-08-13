@@ -33,6 +33,7 @@ function resetMenu() {
 (function() {
   $('#skip-link').click(function() {
     $(window).scrollTop($('.main').position().top - $('.navbar-brand.logo img').height());
+    $('.main').attr('tabindex', '-1');
     $('.main').focus();
   });
   $('#skip-link').on('focus', function() {
