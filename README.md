@@ -39,6 +39,9 @@ These new pages will follow the layout template in `/themes/digitalservices/_def
 * Make sure that their name, job title and photo are correct
 * Submit a PR 
 
+# Review your changes
+* CircleCI will build and deploy your changes to a pantheon multidev
+
 ## Notes
 * Never ever edit files in /public directly (this is hugo generated)
 * This repo is a very basic site, with very few (what hugo calls) content types
