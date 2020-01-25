@@ -6,7 +6,7 @@ jobs:
         - gh-pages
 
     docker:
-      - image: cibuilds/hugo:latest
+      - image: cibuilds/hugo:0.63
 
     working_directory: ~/hugo
 
@@ -22,7 +22,6 @@ jobs:
       - run:
           name: Install php and php extensions
           command: |
-            sudo killall -9 apt-get
             sudo apt-get update && apt-get install php -y
             sudo apt-get install php-curl php-iconv php-json php-mbstring php-xml php-phar php-tokenizer php-dom -y
       
