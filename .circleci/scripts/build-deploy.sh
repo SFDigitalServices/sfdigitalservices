@@ -2,6 +2,8 @@
 
 set -eo pipefail
 
+export PATH=$PATH:/home/circleci/vendor/bin
+
 cd ..
 
 git config --global user.email $GH_EMAIL
