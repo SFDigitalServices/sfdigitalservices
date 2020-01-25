@@ -53,7 +53,6 @@ else
   terminus auth:logout
 
   # comment on commit with review site
-  GIT_COMMIT_SHA=$(git log --pretty=format:"%H" -n 1)
   COMMENT="review site: https://ci-${CIRCLE_BUILD_NUM}-sfdigitalservices.pantheonsite.io"
   OWNER="SFDigitalServices"
   REPO="sfdigitalservices"
