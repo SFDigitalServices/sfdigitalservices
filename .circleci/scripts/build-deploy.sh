@@ -16,7 +16,6 @@ ssh-add ~/.ssh/id_rsa_$PANTHEON_SSH_FINGERPRINT
 ssh-keyscan -H -p $PANTHEON_CODESERVER_PORT $PANTHEON_CODESERVER >> ~/.ssh/known_hosts
 
 cd $CIRCLE_BRANCH
-GIT_COMMIT_SHA=$(git log --pretty=format:"%H" -n 1)
 git checkout $CIRCLE_BRANCH || git checkout --orphan $CIRCLE_BRANCH
 HUGO_ENV=production hugo -v
 mkdir -p ../tmp/.circleci && cp -a .circleci/. ../tmp/.circleci/. # copy circleci config to tmp dir
@@ -58,6 +57,6 @@ else
   COMMENT="review site: https://ci-${CIRCLE_BUILD_NUM}-sfdigitalservices.pantheonsite.io"
   OWNER="SFDigitalServices"
   REPO="sfdigitalservices"
-  curl -u aekong:$GH_ACCESS_TOKEN -H "Content-Type: application/json" -d '{"body":"'"$COMMENT"'"}' -X POST https://api.github.com/repos/$OWNER/$REPO/commits/$GIT_COMMIT_SHA/comments
+  curl -u aekong:$GH_ACCESS_TOKEN -H "Content-Type: application/json" -d '{"body":"'"$COMMENT"'"}' -X POST https://api.github.com/repos/$OWNER/$REPO/commits/$CIRCLE_SHA1/comments
 
 fi
