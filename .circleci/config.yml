@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Install php and php extensions
           command: |
-            sudo apt-get update && apt-get install php -y
+            sudo apt-get update && sudo apt-get install php -y
             sudo apt-get install php-curl php-iconv php-json php-mbstring php-xml php-phar php-tokenizer php-dom -y
       
       - run:
