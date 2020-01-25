@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-export PATH=$PATH:/home/circleci/vendor/bin
+export PATH=$PATH:/home/circleci/hugo/vendor/bin
 
 cd ..
 

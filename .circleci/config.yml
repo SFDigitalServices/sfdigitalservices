@@ -6,7 +6,7 @@ jobs:
         - gh-pages
 
     docker:
-      - image: cibuilds/hugo:0.63
+      - image: cibuilds/hugo:latest
 
     working_directory: ~/hugo
 
