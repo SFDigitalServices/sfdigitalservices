@@ -2,6 +2,8 @@
 
 set -eo pipefail
 
+export PATH=$PATH:/home/circleci/hugo/vendor/bin
+
 cd ..
 
 git config --global user.email $GH_EMAIL
@@ -31,7 +33,29 @@ if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
 else
   git commit -m "build ${CIRCLE_BRANCH} to pantheon remote ci-${CIRCLE_BUILD_NUM}: ${CIRCLE_SHA1}" --allow-empty
   terminus -n auth:login --machine-token="$TERMINUS_MACHINE_TOKEN"
+
+  # do some cleanup
+  terminus multidev:list $PANTHEON_SITENAME --format=list --fields=name > multidevs.txt # capture multidevs to file
+  MD_COUNT="$(< multidevs.txt wc -l)" # capture the multidev count (# lines in file from above)
+  if [ $MD_COUNT -gt 5 ]; then
+    echo "Removing older multidevs"
+    # remove first 3 multidevs in file list
+    head -3 multidevs.txt |
+    while read multidev; do
+      terminus multidev:delete  --delete-branch -y -- $PANTHEON_SITENAME.$multidev
+    done
+  else
+    echo "No need to remove multidevs.  Count: $MD_COUNT"
+  fi
+
   terminus multidev:create $PANTHEON_SITENAME.dev ci-$CIRCLE_BUILD_NUM
   git push -f pantheon $CIRCLE_BRANCH:ci-$CIRCLE_BUILD_NUM
   terminus auth:logout
+
+  # comment on commit with review site
+  COMMENT="review site: https://ci-${CIRCLE_BUILD_NUM}-sfdigitalservices.pantheonsite.io"
+  OWNER="SFDigitalServices"
+  REPO="sfdigitalservices"
+  curl -u aekong:$GH_ACCESS_TOKEN -H "Content-Type: application/json" -d '{"body":"'"$COMMENT"'"}' -X POST https://api.github.com/repos/$OWNER/$REPO/commits/$CIRCLE_SHA1/comments
+
 fi
