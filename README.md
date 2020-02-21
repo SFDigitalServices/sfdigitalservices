@@ -38,7 +38,8 @@ These new pages will follow the layout template in `/themes/digitalservices/_def
 * Edit the `content/ourteam.html` file, add team members in `<div id="staff">` by adding a new `<li class="col-xs-12 col-md-6 col-lg-4">` block
 * Make sure that their name, job title and photo are correct
 * Submit a PR 
-* Once your PR has been approved by a reviewer, merge your PR
+* Once your PR has been approved by a reviewer, who will also send you a preview of your changes (in the form of a Pantheon link), check your preview then merge your PR. If you are not happy with the changes, commit to the same branch, which will generate another Pantheon preview.
+* Merge your PR
 * Reach out to someone with server access (currently, that would be @skinnylatte, @aekong and @henryjiang-sfgov) to deploy with the following commands
 
 ```
