@@ -33,7 +33,7 @@ These new pages will follow the layout template in `/themes/digitalservices/_def
 # How to add team members to website
 
 * When a new person joins the team, get their profile photo in .jpg or .png formats
-* Add their profile photo to the `themes/digitalservices/static/assets` folder, name it like this: `firstname.jpg` or `firstname.png`
+* Add their profile photo to the `themes/static/assets/staff-imgs` folder, name it like this: `firstname.jpg` or `firstname.png`
 * Follow the instructions above to build the site locally and preview changes.
 * Edit the `content/ourteam.html` file, add team members in `<div id="staff">` by adding a new `<li class="col-xs-12 col-md-6 col-lg-4">` block
 * Make sure that their name, job title and photo are correct
