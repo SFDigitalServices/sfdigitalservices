@@ -576,38 +576,39 @@
 
                     <p>Dear {{ data.name }},</p>
 
-					{% if data.outdoorspace == "sidewalk" or data.outdoorspace == "both" %}
+					{% if "sidewalk" in data.outdoorspace %}
 					<p>You are registered to use sidewalk space at your location address.</p>                                        
-					<p>You may start using this space in 2 days.</p>                                        
-					<p>Print the attached PDF permit. This temporary permit is valid until December 31, 2020.</p>                                        
+					<p>You may start using this space in 2 days or on June 15, which comes first. We will contact you if we find issues with your application, proposed location, or insurance documents.</p>
+					<p>Print the attached PDF to display. We will also email you a legally binding permit later this week. This temporary permit is valid until December 31, 2020.</p>                                        
 					{% endif %}
 										
-					{% if data.outdoorspace == "curb" or data.outdoorspace == "both" %}
-					<p>We will review your application for curb space. You may not use curb space until we contact you.</p>
+					{% if "parkingLane" in data.outdoorspace %}
+					<p>We will review your application for the parking lane. You may not use the parking lane now. We will contact you with next steps within 3 business days.</p>
 					{% endif %}
 										
 										
 
-                    <p>If you use sidewalk or curb space, you agree to these rules.</p>
+                    <p>Your permit is valid as long you meet your responsibilities:</p>
 					
-					<ul>
-						<li>Display a copy of the permit during business hours</li>
-						<li>Create and maintain a travel path that is at least 6 feet wide</li>
-						<li>Keep curb ramps, doors, driveways, scapes, or Fire Department connections free of obsctructions</li>
-						<li>Keep furniture in the approved area</li>
-						<li>Use approved diverters</li>
-						<li>Keep furniture and diverters clear and free of advertising, litter, or trash </li>
-						<li>Not place or store food trays or carts on the sidewalk or curb</li>
-						<li>Bring in furniture and diverters when you close every day</li>
-						<li>Have $1 million in commercial general liability insurance coverage</li>
-						<li>Keep workers compensation insurance</li>
-                    </ul>  					
+					<ol>
+						<li>Display a copy of the permit outside during business hours.</li>
+						<li>Make and maintain a straight, clear travel path at least 6 feet (2 yards) wide across your entire sidewalk.</li>
+						<li>Comply with local, state and federal accessibility requirements (see ADA.gov).</li>
+						<li>Keep curb ramps, doors, driveways, fire escapes, or Fire Department connections free of obstructions.</li>
+						<li>Keep furniture in the approved area.</li>
+						<li>Use approved diverters or traffic barriers.</li>
+						<li>Keep furniture and diverters clear and free of advertising.</li>
+						<li>Do not place or store food trays or carts on the sidewalk or curb.</li>
+						<li>Bring in furniture and diverters when you close every day. (Traffic barriers can stay outside.)</li>
+						<li>Have at least $1 million in commercial general liability insurance coverage.</li>
+						<li>Keep workers compensation insurance.</li>
+                    </ol>  					
 
-					<p>Your permit can be revoked if you do not operate safely.</p>
+					<p>We will visit your business location to inspect your approved area. We may revoke your permit.</p>
 
 					<p><a href="https://docs.google.com/document/d/199vTe_MpmwxBtPhe33t8TdN6BuC0eOzMrZX6cQCG1Is/edit" target="_blank">What to expect after you apply</a></p> 
 
-					<p>Email us at <a href="mailto:outdoorbusiness@sfgov.org">outdoorbusiness@sfgov.org<a/></p>
+					<p>Email us at <a href="mailto:sharedspaces@sfgov.org">sharedspaces@sfgov.org<a/></p>
                        
 
                   </td>
