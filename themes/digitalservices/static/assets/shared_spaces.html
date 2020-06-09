@@ -578,35 +578,58 @@
 
 					{% if "sidewalk" in data.outdoorspace %}
 					<p>You are registered to use sidewalk space at your location address.</p>                                        
-					<p>You may start using this space in 2 days or on June 15, which comes first. We will contact you if we find issues with your application, proposed location, or insurance documents.</p>
+					<p>You may start using this space in 2 business days or when outdoor retail or dining is allowed by public health officials, whichever comes first. We will contact you if we find issues with your application, proposed location, or insurance documents.</p>
 					<p>Print the attached PDF to display. We will also email you a legally binding permit later this week. This temporary permit is valid until December 31, 2020.</p>                                        
+					<p>You must provide and install diverters around your outdoor space before you operate.</p>
 					{% endif %}
-										
-					{% if "parkingLane" in data.outdoorspace %}
+					
+					{% if data.curbspace == "curbsidePickupAreaForCars" %}
+					<p>If we decide you can use the parking lane for your business, we aim to post signs and bag parking meters to prevent vehicle parking within the following 4 business days.</p>
+					{% endif %}
+					
+					{% if data.curbspace == "socialDistancingSpaceForYourCustomersToStandInLine" || data.curbspace == "seatingOrDining" || data.curbspace == "retailUse" %}
 					<p>We will review your application for the parking lane. You may not use the parking lane now. We will contact you with next steps within 3 business days.</p>
 					{% endif %}
-										
-										
-
-                    <p>Your permit is valid as long you meet your responsibilities:</p>
+															
+					{% if "sidewalk" not in data.outdoorspace and data.curbspace == "curbsidePickupAreaForCars" %}					
+                    <p>You must follow these rules:</p>
 					
-					<ol>
-						<li>Display a copy of the permit outside during business hours.</li>
-						<li>Make and maintain a straight, clear travel path at least 6 feet (2 yards) wide across your entire sidewalk.</li>
-						<li>Comply with local, state and federal accessibility requirements (see ADA.gov).</li>
-						<li>Keep curb ramps, doors, driveways, fire escapes, or Fire Department connections free of obstructions.</li>
-						<li>Keep furniture in the approved area.</li>
-						<li>Use approved diverters or traffic barriers.</li>
-						<li>Keep furniture and diverters clear and free of advertising.</li>
-						<li>Do not place or store food trays or carts on the sidewalk or curb.</li>
-						<li>Bring in furniture and diverters when you close every day. (Traffic barriers can stay outside.)</li>
-						<li>Have at least $1 million in commercial general liability insurance coverage.</li>
-						<li>Keep workers compensation insurance.</li>
-                    </ol>  					
+					<ul>
+						<li>Follow physical distancing protocols</li>
+						<li>Display a copy of the permit during business hours</li>
+						<li>Comply with the Americans with Disabilities Act (ADA) and the SF Better Streets Plan</li>
+						<li>Keep curb ramps, doors, driveways, fire escapes, or Fire Department connections free of obstructions</li>
+						<li>Keep furniture in the approved area</li>
+						<li>Don’t place or store food trays or carts on the sidewalk or parking lane</li>
+						<li>Keep the parking lane and sidewalk clean of trash, debris, and food waste at all times</li>
+						<li>Don’t obstruct the sidewalk next to a bus stop or blue curb zone</li>
+
+                    </ul>
+					{% endif %}
+					
+					{% if "sidewalk" in data.outdoorspace %}
+                    <p>Additional sidewalk rules</p>
+					
+					<ul>
+						<li>Make and maintain a straight, clear travel path at least 6 feet (2 yards) wide across your entire sidewalk</li>
+						<li>Provide and use approved diverters</li>
+						<li>Keep furniture and diverters clear and free of advertising</li>
+						<li>Bring in furniture and diverters when you close every day</li>
+					</ul>
+					{% endif %}
+
+					{% if data.curbspace == "seatingOrDining" %}
+                    <p>Additional parking lane seating rules</p>
+					
+					<ul>
+						<li>Add approved traffic barriers</li>
+						<li>Provide an ADA accessible table and route if another is not available</li>
+					</ul>
+					{% endif %}					
 
 					<p>We will visit your business location to inspect your approved area. We may revoke your permit.</p>
 
-					<p><a href="https://docs.google.com/document/d/199vTe_MpmwxBtPhe33t8TdN6BuC0eOzMrZX6cQCG1Is/edit" target="_blank">What to expect after you apply</a></p> 
+					<p><a href="https://sf.gov/information/what-expect-after-you-apply-use-sidewalk-or-parking-lane" target="_blank">What to expect after you apply</a></p> 
 
 					<p>Email us at <a href="mailto:sharedspaces@sfgov.org">sharedspaces@sfgov.org<a/></p>
                        
