@@ -576,7 +576,7 @@
 
                     <p>Dear {{ data.name }},</p>
 
-					{% if "sidewalk" in data.outdoorspace %}
+					{% if data.outdoorspace.sidewalk %}
 					<p>You are registered to use sidewalk space at your location address.</p>                                        
 					<p>You may start using this space in 2 business days or when outdoor retail or dining is allowed by public health officials, whichever comes first. We will contact you if we find issues with your application, proposed location, or insurance documents.</p>
 					<p>Print the attached PDF to display. We will also email you a legally binding permit later this week. This temporary permit is valid until December 31, 2020.</p>                                        
@@ -591,7 +591,7 @@
 					<p>We will review your application for the parking lane. You may not use the parking lane now. We will contact you with next steps within 3 business days.</p>
 					{% endif %}
 															
-					{% if "sidewalk" in data.outdoorspace or data.curbspace == "socialDistancingSpaceForYourCustomersToStandInLine" or data.curbspace == "seatingOrDining" or data.curbspace == "retailUse" %}					
+					{% if data.outdoorspace.sidewalk or data.curbspace == "socialDistancingSpaceForYourCustomersToStandInLine" or data.curbspace == "seatingOrDining" or data.curbspace == "retailUse" %}					
                     <p>You must follow these rules:</p>
 					
 					<ul>
@@ -607,7 +607,7 @@
                     </ul>
 					{% endif %}
 					
-					{% if "sidewalk" in data.outdoorspace %}
+					{% if data.outdoorspace.sidewalk %}
                     <p>Additional sidewalk rules</p>
 					
 					<ul>
