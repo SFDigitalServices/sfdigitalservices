@@ -587,11 +587,11 @@
 					<p>If we decide you can use the parking lane for your business, we aim to post signs and bag parking meters to prevent vehicle parking within the following 4 business days.</p>
 					{% endif %}
 					
-					{% if data.curbspace == "socialDistancingSpaceForYourCustomersToStandInLine" || data.curbspace == "seatingOrDining" || data.curbspace == "retailUse" %}
+					{% if data.curbspace == "socialDistancingSpaceForYourCustomersToStandInLine" or data.curbspace == "seatingOrDining" or data.curbspace == "retailUse" %}
 					<p>We will review your application for the parking lane. You may not use the parking lane now. We will contact you with next steps within 3 business days.</p>
 					{% endif %}
 															
-					{% if "sidewalk" not in data.outdoorspace and data.curbspace == "curbsidePickupAreaForCars" %}					
+					{% if not "sidewalk" in data.outdoorspace and data.curbspace == "curbsidePickupAreaForCars" %}					
                     <p>You must follow these rules:</p>
 					
 					<ul>
