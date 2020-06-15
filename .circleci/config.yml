@@ -11,7 +11,7 @@ jobs:
     working_directory: ~/hugo
 
     environment:
-      - SOURCE_BRANCH: master
+      - SOURCE_BRANCH: main
       - TARGET_BRANCH: gh-pages
 
     steps:
