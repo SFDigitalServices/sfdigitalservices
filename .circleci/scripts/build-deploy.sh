@@ -28,7 +28,7 @@ git add -A
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
   git commit -m "build ${CIRCLE_BRANCH} ${CIRCLE_SHA1}" --allow-empty
-  git push -f pantheon $CIRCLE_BRANCH:main
+  git push -f pantheon $CIRCLE_BRANCH:master
   git push -f origin $CIRCLE_BRANCH:gh-pages
 else
   git commit -m "build ${CIRCLE_BRANCH} to pantheon remote ci-${CIRCLE_BUILD_NUM}: ${CIRCLE_SHA1}" --allow-empty
