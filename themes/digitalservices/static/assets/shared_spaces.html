@@ -583,11 +583,7 @@
 					<p>You must provide and install diverters around your outdoor space before you operate.</p>
 					{% endif %}
 					
-					{% if data.curbspace == "curbsidePickupAreaForCars" %}
-					<p>If we decide you can use the parking lane for your business, we aim to post signs and bag parking meters to prevent vehicle parking within the following 4 business days.</p>
-					{% endif %}
-					
-					{% if data.curbspace == "socialDistancingSpaceForYourCustomersToStandInLine" or data.curbspace == "seatingOrDining" or data.curbspace == "retailUse" %}
+					{% if data.outdoorspace.parkingLane %}
 					<p>We will review your application for the parking lane. You may not use the parking lane now. We will contact you with next steps within 3 business days.</p>
 					{% endif %}
 															
