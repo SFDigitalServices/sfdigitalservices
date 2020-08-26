@@ -43,8 +43,7 @@ These new pages will follow the layout template in `/themes/digitalservices/_def
 * Reach out to someone with server access (currently, that would be @skinnylatte, @aekong and @henryjiang-sfgov) to deploy with the following commands
 
 ```
- cd /var/www/html/digitalservices
-$ cd public
+$ cd /var/www/html/digitalservices/public
 $ sudo git fetch --all
 $ sudo git reset --hard origin/gh-pages
 ```
