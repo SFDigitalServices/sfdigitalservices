@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>You applied to join the waitlist for a building permit appointment</title>
+  <title>You joined the waitlist for a building permit appointment</title>
   <style>
     /* -------------------------------------
         GLOBAL RESETS
@@ -285,7 +285,7 @@
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>
-                    <h2>You applied to join the waitlist for a building permit appointment</h2>
+                    <h2>You joined the waitlist for a building permit appointment</h2>
                     
 		    <p>Dear {{ data.applicantFirstName }},</p>
 
@@ -298,8 +298,7 @@
                     <p>You may only join the waitlist for one appointment at a time. If you complete that waitlist appointment and you meet the criteria for another project, you can join the waitlist again.</p>
 
  		    <p>Thank you again,<br />Permit Center and Department of Building Inspection</p>
-		    <hr>
-		    {{ content }} 
+		    <p>{{ content }}</p> 
                   </td>
                 </tr>
               </table>
@@ -311,7 +310,6 @@
         </div>
       </div>
     </td>
-    <td>&nbsp;</td>
   </tr>
 </table>
 </body>
