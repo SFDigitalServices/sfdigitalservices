@@ -1299,3 +1299,9 @@ ul.left-aligned {
     margin-top: 4em;
   }
 }
+
+/* adding text styles for RFP 2020-11-30 */
+
+.rfp {
+  padding: 50px;
+}
