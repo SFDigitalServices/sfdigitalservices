@@ -1,0 +1,516 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Your application has been received - one more step!</title>
+  <style>
+    /* -------------------------------------
+        GLOBAL RESETS
+    ------------------------------------- */
+
+    /*All the styling goes here*/
+
+    img {
+      border: none;
+      -ms-interpolation-mode: bicubic;
+      max-width: 100%;
+    }
+    body {
+      background-color: #f1f1f1;
+      font-family: 'Rubik', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+    table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      width: 100%; }
+    table td {
+      font-family: 'Rubik', sans-serif;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    /* -------------------------------------
+        BODY & CONTAINER
+    ------------------------------------- */
+    .body {
+      background-color: #f1f1f1;
+      width: 100%;
+    }
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      margin: 0 auto !important;
+      /* makes it centered */
+      max-width: 640px;
+      padding: 40px;
+      width: 640px;
+    }
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 640px;
+      padding: 10px;
+    }
+    /* -------------------------------------
+        HEADER, FOOTER, MAIN
+    ------------------------------------- */
+    .main {
+      background: #ffffff;
+      border-radius: 8px;
+      width: 100%;
+    }
+    .wrapper {
+      box-sizing: border-box;
+      padding: 40px;
+    }
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    .footer {
+      clear: both;
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    .footer td,
+    .footer p,
+    .footer span,
+    .footer a {
+      color: #999999;
+      font-size: 12px;
+      text-align: center;
+    }
+    /* -------------------------------------
+        TYPOGRAPHY
+    ------------------------------------- */
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #1C3E57;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 400;
+      line-height: 1.4;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 35px;
+      font-weight: 300;
+      text-align: center;
+      text-transform: capitalize;
+    }
+    p,
+    ul,
+    ol {
+      color: #1C3E57;
+      font-family: 'Rubik', sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+    ul {
+      padding-inline-start: 10px;
+    }
+    ul ul {
+      padding-inline-start: 20px;
+      margin-bottom: 0;
+    }
+    p li,
+    ul li,
+    ol li {
+      list-style-position: outside;
+      margin-left: 5px;
+      padding-bottom: 10px;
+    }
+    ul li ul {
+      padding-top: 10px;
+    }
+    ul li ul li {
+      line-height: 1.5;
+    }
+    a {
+      color: #4f66ee;
+      text-decoration: underline;
+    }
+    /* -------------------------------------
+        BUTTONS
+    ------------------------------------- */
+    .btn {
+      box-sizing: border-box;
+      background-color: #4f66ee;
+      border: solid 1px #4f66ee;
+      border-radius: 8px;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-transform: inherit;
+    }
+    /* -------------------------------------
+        OTHER STYLES THAT MIGHT BE USEFUL
+    ------------------------------------- */
+    .last {
+      margin-bottom: 0;
+    }
+    .first {
+      margin-top: 0;
+    }
+    .align-center {
+      text-align: center;
+    }
+    .align-right {
+      text-align: right;
+    }
+    .align-left {
+      text-align: left;
+    }
+    .clear {
+      clear: both;
+    }
+    .mt0 {
+      margin-top: 0;
+    }
+    .mb0 {
+      margin-bottom: 0;
+    }
+    .preheader {
+      color: transparent;
+      display: none;
+      height: 0;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      mso-hide: all;
+      visibility: hidden;
+      width: 0;
+    }
+    .powered-by a {
+      text-decoration: none;
+    }
+    hr {
+      border: 0;
+      border-bottom: 1px solid #f6f6f6;
+      Margin: 20px 0;
+    }
+    /* -------------------------------------
+        RESPONSIVE AND MOBILE FRIENDLY STYLES
+    ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+      }
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span,
+      table[class=body] a {
+        font-size: 16px !important;
+      }
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 10px !important;
+      }
+      table[class=body] .content {
+        padding: 0 !important;
+      }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+      table[class=body] .btn table {
+        width: 100% !important;
+      }
+      table[class=body] .btn a {
+        width: 100% !important;
+      }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
+    /* -------------------------------------
+        PRESERVE THESE STYLES IN THE HEAD
+    ------------------------------------- */
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+      .btn-primary table td:hover {
+        background-color: #34495e !important;
+      }
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+  </style>
+</head>
+
+
+
+{% set eligibilityForms = data.eligibilityForms.split(',') %}
+{% set doingConstruction = true if data.whatBusinessChanges.makePhysicalChangesToMyBusiness or data.physicalChanges == "yes" else false %}
+{% set form38 = true if '3' in eligibilityForms else false %}
+{% set buildingPermit = true if '3' in eligibilityForms or '5' in eligibilityForms or '10' in eligibilityForms else false %}
+{% set healthPermit = true if '13' in eligibilityForms or '15' in eligibilityForms or '21' in eligibilityForms or '22' in eligibilityForms else false %}
+{% set otherPermits = true if '14' in eligibilityForms or '16' in eligibilityForms or '17' in eligibilityForms  or '18' in eligibilityForms or '19' in eligibilityForms or '20' in eligibilityForms else false %}
+{% set noPermitsNeeded = true if not buildingPermit and not healthPermit and not otherPermits else false %}
+
+<body class="">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+  <tr>
+    <td>&nbsp;</td>
+    <td class="container">
+      <div class="content">
+        <table role="presentation" class="main">
+          <tr>
+            <td class="wrapper">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>                    
+                    <p>Dear <b>{{ data.name }}</b>,</p>
+
+                    <br/>
+         
+                    <p>Thank you for checking what forms you need for your business permits for <b>{% if data.banNumber == 'yes' %}{{ data.DBAName }}{% else %}{{ data.noBAN-DBAName }}{% endif %}</b> at <b>{{ data.StreetAddress }}</b>.</p> 
+					
+					{% if noPermitsNeeded %}
+						<p>Based on your answers, you do not need a business permit to change the ownership of your business. Apply for a business account update with the SF Treasurer and Tax Collector.</p>
+					</div>
+					{% else %}
+					
+                        
+                    <p>Here are the forms that you need to fill out for your business permits. These forms are based on your answers to our questions.</p>
+                        
+                    <p>We will email you within 3 business days if your business is not eligible for a 30-day review under Prop H.</p>
+
+                    <p><b>You must fill out these forms and submit them to us to start your 30-day review period.</b></p>
+
+                    <p>After you submit them, we will check to make sure your submission is complete and accurate. Then your 30-day review period will begin.</p>
+                    
+
+
+
+
+
+					{% if '2' in eligibilityForms %}
+                    <br/>
+                    <h2>Register your business</h2>
+                      <ul>
+                          <li><a target="_blank" href="https://sftreasurer.org/business/register-business">Register your business</a> as soon as possible if you do not have a BAN number. We require a BAN number to apply for and issue many permits.</li>
+                      </ul>
+					{% endif %}
+
+
+
+
+
+
+					{% if buildingPermit %}
+                      <br/>
+                     <h2>Your building permit forms</h2>
+                        <ul>
+                          {% if '3' in eligibilityForms %}
+						  <li>Download and fill out <a target="_blank" href="https://sfdbi.org/sites/default/files/BldgForm3-8_Fillable.pdf">the building permit application form</a> (PDF).</li>
+						  {% endif %}
+
+                          {% if '5' in eligibilityForms %}
+						  <li>Download and fill out <a target="_blank" href="https://sfdbi.org/building-form-4-7">the sign permit form</a> (PDF).</li>
+						  {% endif %}
+
+						  {% if '12' in eligibilityForms or doingConstruction %}
+                          <li>Your project requires architectural plans.
+                            <ul>
+                              <li><a target="_blank" href="https://sf.gov/information/how-create-pdfs-your-plans-or-addenda">Follow these instructions to create your building project plans</a>.</li>
+                            </ul>
+                          </li>
+						  {% endif %}
+
+						  {% if doingConstruction %}
+                          <li>With architectural plans include:
+                            <ul>
+                              <li><a target="_blank" href="https://sfdbi.org/sites/default/files/Category%20Checklist%20Compliance%20Form.pdf">Disability Checklist for ADA compliance</a> (PDF)</li>
+                              
+                              <li><a target="_blank" href="https://sf.gov/fill-out-green-energy-forms">Title 24 Green Energy form</a></li>
+                              
+                              {% if healthPermit %}
+							  <li><a target="_blank" href="https://www.sfdph.org/dph/files/EHSdocs/ehsFood/permitsdocs/PlanCheckApplication.pdf">Plan check application for the Department of Public Health</a> (PDF)</li>
+							  {% endif %}
+                              
+                              {% if '4' in eligibilityForms or '8' in eligibilityForms %}
+							  <li><a target="_blank" href="https://sfwater.org/modules/showdocument.aspx?documentid=13115">Fixture Count form</a> (PDF)</li>
+							  {% endif %}
+                             
+                              {% if '7' in eligibilityForms %}
+							  <li><a target="_blank" href="https://sfwater.org/modules/showdocument.aspx?documentid=15941">SFPUC Checklist</a> (PDF)</li>
+							  {% endif %}
+                            </ul>
+                          </li>
+						  {% endif %}
+
+						  {% if '10' in eligibilityForms %}
+                          <li>If you do not already have a sprinkler, you may have to apply for a sprinkler permit with your building permit. <a target="_blank" href="https://sf-fire.org/plan-check">See more information from SF Fire</a>.</li>
+						  {% endif %}
+                        </ul>
+					{% endif %}
+
+
+
+
+
+					    {% if healthPermit %}
+                        <br/>
+                        <h2>Your health permit</h2>
+					      {% if doingConstruction %}
+                          <p>You may apply for your health permits after you submit the forms for your other business permits.</p>
+                          
+                          <p>When you submit your other permits, you must acknowledge that you are choosing to not submit your health permit at this time. Your health permit will not be tied to this 30-day review. It will be subject to its own 30-day review period.</p>
+						  {% endif %}
+
+                          <ul>
+							  {% if '13' in eligibilityForms %}
+                              <li>Apply for <a target="_blank" href="https://etaxstatement.sfgov.org/DphEhbFoodPermit">your food permit with the Department of Public Health</a>. (Save your transaction ID.)</li>
+							  {% endif %}
+
+							  {% if '15' in eligibilityForms %}
+                              <li>Apply for <a target="_blank" href="https://www.sfdph.org/dph/eh/BodyArt/default.asp">your Tattoo, Body Piercing and Permanent Cosmetics permit</a>.</li>
+							  {% endif %}
+
+							  {% if '22' in eligibilityForms %}
+                              <li>Apply for <a target="_blank" href="https://www.sfdph.org/dph/EH/Laundry_Pets/default.asp">your permit for overnight animal boarding</a>.</li>
+							  {% endif %}
+
+							  {% if '21' in eligibilityForms %}
+                              <li>Apply for <a target="_blank" href="https://www.sfdph.org/dph/EH/Laundry_Pets/default.asp">your permit to operate a laundry facility</a>.</li>
+							  {% endif %}
+                          </ul>
+						{% endif %}
+
+
+
+
+
+
+					      {% if otherPermits %}
+                          <br/>
+						  {% if not buildingPermit and not healthPermit %}
+                          <h2>Your permits</h2>
+						  {% else %}
+                          <h2>Your other permits</h2>
+						  {% endif %}
+                            <ul>
+							  {% if '14' in eligibilityForms %}
+                              <li>Find <a target="_blank" href="https://sfgov.org/entertainment/permit-applications">your permit from the Entertainment Commission</a>.</li>
+							  {% endif %}
+
+							  {% if '16' in eligibilityForms %}
+                              <li>Download and fill out the <a target="_blank" href="https://sf-fire.org/sites/default/files/SFFD/BFP/I%20Documents/Permit%20Application%2011052020.pdf">Operational permit for a place for assembly</a> (PDF)</li>
+							  {% endif %}
+
+							  {% if '17' in eligibilityForms %}
+                              <li>Download and fill out the <a target="_blank" href="https://sf-fire.org/sites/default/files/SFFD/BFP/I%20Documents/Permit%20Application%2011052020.pdf">Operational permit for an open flame</a> (PDF)</li>
+							  {% endif %}
+
+							  {% if '18' in eligibilityForms %}
+                              <li>Apply for <a target="_blank" href="https://sfwater.org/modules/showdocument.aspx?documentid=4099">your Industrial user discharge permit</a>. This will take more than 30 days.</li>
+							  {% endif %}
+
+							  {% if '19' in eligibilityForms %}
+                              <li>Apply for your <a target="_blank" href="http://sfpublicworks.org/services/permits/street-space">street space permit</a> to use street space during construction. (Save your transaction ID.)</li>
+							  {% endif %}
+
+							  {% if '20' in eligibilityForms %}
+                              <li>Apply for <a target="_blank" href="https://sf.gov/shared-spaces">a Shared Spaces permit</a>.</li>
+							  {% endif %}
+                          </ul>
+						  {% endif %}
+
+                          <br/>
+						  {% if '4' in eligibilityForms or '8' in eligibilityForms %}
+                          <p>You may also need to apply for a New Water Service Installation or meter increase. See <a target="_blank" href="https://sfwater.org/index.aspx?page=1194">Public Utilities Commission (PUC) for more information</a>.</p>
+						  {% endif %}
+
+						  {% if '23' in eligibilityForms %}
+                          <p>You must <a target="_blank" href="https://www.abc.ca.gov/licensing/apply-for-a-new-license/">apply for an alcohol license</a> with the State of California’s Department of Alcohol and Beverage Control (ABC). The City of SF is not involved in this license. You do not need to tell us that you have applied for it or include it in your application with the City of SF.</p>
+						  {% endif %}
+                          
+                          <br/>
+
+                          <p><b>When you have filled out the forms, submit your forms to us to start your 30-day review period.</b></p>
+
+                          <a class="btn" target="_blank" href="https://sf.gov/submit-your-forms-your-business-permits/form?eligibilityId={{ id | urlencode }}&eligibilityForms={{ data.eligibilityForms  | urlencode }}&name={{ data.name | urlencode }}&email={{ data.email | urlencode }}&businessDBAName={% if data.banNumber == 'yes' %}{{ data.DBAName | urlencode }}{% else %}{{ data.noBAN-DBAName | urlencode }}{% endif %}&businessAddress={{ data.StreetAddress | urlencode }}">Submit your form</a>
+
+                          <br/>
+                      </ul>
+                    
+					{% endif %}
+					
+                    <br/><br/>
+
+                    <p>Thank you,<br/>SF Small Business Permitting Team</p>
+
+                    <span>
+                      <a class="footer-global--logo" href="http://www.sfgov.org" title="City Seal of the City and County of San Francisco">
+                     <img style="margin: 50px auto 0;display: block;" src="https://digitalservices.sfgov.org/assets/CCSF_seal_2019_black.png" width="80" height="80" alt="City and County of San Francisco city seal">
+                      </a>
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <div class="footer">
+
+        </div>
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
