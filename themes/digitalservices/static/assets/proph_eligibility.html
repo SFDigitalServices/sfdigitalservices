@@ -316,7 +316,7 @@
 
                     <br/>
          
-                    <p>Thank you for checking what forms you need for your business permits for <b>{% if data.banNumber == 'yes' %}{{ data.DBAName }}{% else %}{{ data.noBAN-DBAName }}{% endif %}</b> at <b>{{ data.StreetAddress }}</b>.</p> 
+                    <p>Thank you for checking what forms you need for your business permits for <b>{% if data.banNumber == 'yes' %}{{ data.DBAName }}{% else %}{{ data['noBAN-DBAName'] }}{% endif %}</b> at <b>{{ data.StreetAddress }}</b>.</p> 
 					
 					{% if noPermitsNeeded %}
 						<p>Based on your answers, you do not need a business permit to change the ownership of your business. Apply for a business account update with the SF Treasurer and Tax Collector.</p>
