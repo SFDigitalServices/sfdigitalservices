@@ -297,6 +297,7 @@
 {% set form38 = true if '3' in eligibilityForms else false %}
 {% set buildingPermit = true if '3' in eligibilityForms or '5' in eligibilityForms or '10' in eligibilityForms else false %}
 {% set healthPermit = true if '13' in eligibilityForms or '15' in eligibilityForms or '21' in eligibilityForms or '22' in eligibilityForms else false %}
+{% set architecturalPlansSupplement = true if healthPermit or '4' in eligibilityForms or '6' in eligibilityForms or '7' in eligibilityForms or '8' in eligibilityForms else false %}
 {% set otherPermits = true if '14' in eligibilityForms or '16' in eligibilityForms or '17' in eligibilityForms  or '18' in eligibilityForms or '19' in eligibilityForms or '20' in eligibilityForms else false %}
 {% set noPermitsNeeded = true if not buildingPermit and not healthPermit and not otherPermits else false %}
 
@@ -370,12 +371,14 @@
                           </li>
 						  {% endif %}
 
-						  {% if doingConstruction %}
+						  {% if architecturalPlansSupplement %}
                           <li>With architectural plans include:
                             <ul>
+                              {% if '6' in eligibilityForms %}
                               <li><a target="_blank" href="https://sfdbi.org/sites/default/files/Category%20Checklist%20Compliance%20Form.pdf">Disability Checklist for ADA compliance</a> (PDF)</li>
                               
                               <li><a target="_blank" href="https://sf.gov/fill-out-green-energy-forms">Title 24 Green Energy form</a></li>
+							  {% endif %}
                               
                               {% if healthPermit %}
 							  <li><a target="_blank" href="https://www.sfdph.org/dph/files/EHSdocs/ehsFood/permitsdocs/PlanCheckApplication.pdf">Plan check application for the Department of Public Health</a> (PDF)</li>
@@ -482,7 +485,7 @@
 
                           <p><b>When you have filled out the forms, submit your forms to us to start your 30-day review period.</b></p>
 
-                          <a class="btn" style="color: #ffffff;" target="_blank" href="https://sf.gov/submit-your-forms-your-business-permits/form?eligibilityId={{ id | urlencode }}&eligibilityForms={{ data.eligibilityForms  | urlencode }}&name={{ data.name | urlencode }}&email={{ data.email | urlencode }}&businessDBAName={% if data.banNumber == 'yes' %}{{ data.DBAName | urlencode }}{% else %}{{ data.noBAN-DBAName | urlencode }}{% endif %}&businessAddress={{ data.StreetAddress | urlencode }}">Submit your form</a>
+                          <a class="btn" style="color: #ffffff;" target="_blank" href="https://sf.gov/submit-your-forms-your-business-permits/form?eligibilityId={{ id | urlencode }}&eligibilityForms={{ data.eligibilityForms  | urlencode }}&name={{ data.name | urlencode }}&email={{ data.email | urlencode }}&businessDBAName={% if data.banNumber == 'yes' %}{{ data.DBAName | urlencode }}{% else %}{{ data['noBAN-DBAName'] | urlencode }}{% endif %}&businessAddress={{ data.projectAddress | urlencode }}">Submit your form</a>
 
                           <br/>
                       </ul>
