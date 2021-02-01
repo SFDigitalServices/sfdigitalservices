@@ -1295,11 +1295,16 @@ ul.left-aligned {
 
 /* col-med break */
 @media only screen and (min-width: 992px) {
-  .naomi-quote {
+  .carmen-quote {
     margin-top: 4em;
   }
 }
 
+/* Carmen's quote alignment here */
+
+  .carmen-quote{
+    margin-bottom: 2em;
+  }
 /* adding text styles for RFP 2020-11-30 */
 
 .rfp {
