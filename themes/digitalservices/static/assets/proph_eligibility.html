@@ -483,10 +483,7 @@
                           
                           <br/>
 
-                          <p><b>When you have filled out the forms, submit your forms to us to start your 30-day review period.</b></p>
-
-                          <a class="btn" style="color: #ffffff;" target="_blank" href="https://sf.gov/submit-your-forms-your-business-permits/form?eligibilityId={{ id | urlencode }}&eligibilityForms={{ data.eligibilityForms  | urlencode }}&name={{ data.name | urlencode }}&email={{ data.email | urlencode }}&businessDBAName={% if data.banNumber == 'yes' %}{{ data.DBAName | urlencode }}{% else %}{{ data['noBAN-DBAName'] | urlencode }}{% endif %}&businessAddress={{ data.projectAddress | urlencode }}">Submit your form</a>
-
+                          <p><b>When you have filled out the forms, <a target="_blank" href="https://sf.gov/submit-your-forms-your-business-permits/form?eligibilityId={{ id | urlencode }}&eligibilityForms={{ data.eligibilityForms  | urlencode }}&name={{ data.name | urlencode }}&email={{ data.email | urlencode }}&businessDBAName={% if data.banNumber == 'yes' %}{{ data.DBAName | urlencode }}{% else %}{{ data['noBAN-DBAName'] | urlencode }}{% endif %}&businessAddress={{ data.projectAddress | urlencode }}">submit your forms to us to start your 30-day review period.</a></b></p>
                           <br/>
                       </ul>
                     
