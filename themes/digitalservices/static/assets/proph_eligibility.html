@@ -327,9 +327,9 @@
                         
                     <p>Here are the forms that you need to fill out for your business permits. These forms are based on your answers to our questions.</p>
                         
-                    <p>We will email you within 3 business days if your business is not eligible for a 30-day review under Prop H.</p>
+                    <p>In 3 days, we will email you if your business is eligible for a 30-day review under Prop H.</p>
 
-                    <p><b>You must fill out these forms and submit them to us to start your 30-day review period.</b></p>
+                    <p><b>Wait until we confirm before submitting the forms.</b></p>
 
                     <p>After you submit them, we will check to make sure your submission is complete and accurate. Then your 30-day review period will begin.</p>
                     
@@ -411,7 +411,7 @@
 					      {% if doingConstruction %}
                           <p>You may apply for your health permits after you submit the forms for your other business permits.</p>
                           
-                          <p>When you submit your other permits, you must acknowledge that you are choosing to not submit your health permit at this time. Your health permit will not be tied to this 30-day review. It will be subject to its own 30-day review period.</p>
+                          <p>If you choose to submit your health permits later, you must acknowledge that you are choosing to not submit your health permit at this time. Your health permit will not be tied to this 30-day review. It will be subject to its own 30-day review period.</p>
 						  {% endif %}
 
                           <ul>
@@ -483,10 +483,7 @@
                           
                           <br/>
 
-                          <p><b>When you have filled out the forms, submit your forms to us to start your 30-day review period.</b></p>
-
-                          <a class="btn" style="color: #ffffff;" target="_blank" href="https://sf.gov/submit-your-forms-your-business-permits/form?eligibilityId={{ id | urlencode }}&eligibilityForms={{ data.eligibilityForms  | urlencode }}&name={{ data.name | urlencode }}&email={{ data.email | urlencode }}&businessDBAName={% if data.banNumber == 'yes' %}{{ data.DBAName | urlencode }}{% else %}{{ data['noBAN-DBAName'] | urlencode }}{% endif %}&businessAddress={{ data.projectAddress | urlencode }}">Submit your form</a>
-
+                          <p><b>When you have filled out the forms, <a target="_blank" href="https://sf.gov/submit-your-forms-your-business-permits/form?eligibilityId={{ id | urlencode }}&eligibilityForms={{ data.eligibilityForms  | urlencode }}&name={{ data.name | urlencode }}&email={{ data.email | urlencode }}&businessDBAName={% if data.banNumber == 'yes' %}{{ data.DBAName | urlencode }}{% else %}{{ data['noBAN-DBAName'] | urlencode }}{% endif %}&businessAddress={{ data.projectAddress | urlencode }}">submit your forms to us to start your 30-day review period.</a></b></p>
                           <br/>
                       </ul>
                     
