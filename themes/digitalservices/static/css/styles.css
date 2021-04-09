@@ -382,6 +382,11 @@ h6.separator-quote-3, h6.separator-quote-3 a{
 #about {
   margin: 250px auto 60px;
 }
+
+#about.joinus {
+  margin-top: 180px;
+}
+
 .about-box,
 .staff-body {
   text-align: center;
