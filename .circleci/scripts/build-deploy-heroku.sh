@@ -3,9 +3,10 @@
 set -eo pipefail
 
 static_branch=$CIRCLE_BRANCH-static-ci
-pr_number=$(expr ${CIRCLE_PULL_REQUEST##*/} + 0)
 
 cd ~/hugo
+
+echo "Run hugo to build static site"
 HUGO_ENV=production hugo -v
 
 git config --global user.email $GH_EMAIL
@@ -23,6 +24,8 @@ if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
   git commit -m "build $CIRCLE_SHA1 to gh-pages"
   git push -f origin gh-pages
 else
+  pr_number=$(expr ${CIRCLE_PULL_REQUEST##*/} + 0)
+  
   # make this branch deployable on heroku
   echo "{}" > composer.json
   echo "<?php include_once('index.html'); ?>" > index.php
