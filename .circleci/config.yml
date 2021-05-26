@@ -4,6 +4,7 @@ jobs:
     branches:
       ignore:
         - gh-pages
+        - /.*-static-ci/
 
     docker:
       - image: cibuilds/hugo:latest
@@ -17,24 +18,7 @@ jobs:
     steps:
       - checkout
 
-      - add_ssh_keys
-
-      - run:
-          name: Install php and php extensions
-          command: |
-            sudo apt-get update && sudo apt-get install php -y
-            sudo apt-get install php-curl php-iconv php-json php-mbstring php-xml php-phar php-tokenizer php-dom -y
-      
-      - run:
-          name: Install composer
-          command: ./.circleci/scripts/install-composer.sh
-      
-      - run:
-          name: Install terminus
-          command: |
-            curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-
       - run:
           name: Build and deploy
-          command: ./.circleci/scripts/build-deploy.sh
+          command: ./.circleci/scripts/build-deploy-heroku.sh
 
