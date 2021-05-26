@@ -13,6 +13,9 @@ static_branch=$CIRCLE_BRANCH-static-ci
 cd ~/hugo
 HUGO_ENV=production hugo -v
 
+git config --global user.email $GH_EMAIL
+git config --global user.name $GH_NAME
+
 git fetch && git checkout -b origin/$static_branch $static_branch || git checkout -b $static_branch
 mkdir -p ../tmp/.circleci && cp -a .circleci/. ../tmp/.circleci/. # copy circleci config to tmp dir
 git rm -rf . # remove everything
