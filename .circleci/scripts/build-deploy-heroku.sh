@@ -8,14 +8,16 @@ set -eo pipefail
 # else
 #   create heroku review app via api with circle branch
 
-static_branch=$CIRCLE_BRANCH-static
+static_branch=$CIRCLE_BRANCH-static-ci
 
 cd ~/hugo
 HUGO_ENV=production hugo -v
 
 git checkout -b $static_branch
+mkdir -p ../tmp/.circleci && cp -a .circleci/. ../tmp/.circleci/. # copy circleci config to tmp dir
 git rm -rf . # remove everything
 mv public/* . # move hugo generated files into root of branch dir
+cp -a ../tmp/.circleci # copy circleci config back to prevent triggering build on ignored branches
 git push origin $static_branch
 
 curl -n -X POST https://api.heroku.com/review-apps \
