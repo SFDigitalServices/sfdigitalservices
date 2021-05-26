@@ -22,11 +22,14 @@ git rm -rf . # remove everything
 mv public/* . # move hugo generated files into root of branch dir
 cp -a ../tmp/.circleci . # copy circleci config back to prevent triggering build on ignored branches
 git add -A
-git commit -m "static build for $CIRCLE_BRANCH $CIRCLE_SHA1"
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
   echo "main build"
 else
+  echo "{}" > composer.json
+  echo "<?php include_once('index.html'); ?>" > index.php
+  git add -A
+  git commit -m "review app static build for $CIRCLE_BRANCH $CIRCLE_SHA1"
   git push -f origin $static_branch
 
   # create review app on heroku
