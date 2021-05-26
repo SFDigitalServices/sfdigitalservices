@@ -19,10 +19,17 @@ git rm -rf . # remove everything
 mv public/* . # move hugo generated files into root of branch dir
 cp -a ../tmp/.circleci . # copy circleci config back to prevent triggering build on ignored branches
 git add -A
-git push origin $static_branch
+git commit -m "static build for $CIRCLE_BRANCH $CIRCLE_SHA1"
 
-curl -n -X POST https://api.heroku.com/review-apps \
-  -d '{"branch":"'$static_branch'","pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"null"}}' \
-  -H "Content-Type: application/json" \
-  -H "Accept: application/vnd.heroku+json; version=3" \
-  -H "Authorization: Bearer $HEROKU_AUTH_TOKEN"
+if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
+  echo "main build"
+else
+  git push -f origin $static_branch
+
+  # create review app on heroku
+  curl -n -X POST https://api.heroku.com/review-apps \
+    -d '{"branch":"'$static_branch'","pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"null"}}' \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/vnd.heroku+json; version=3" \
+    -H "Authorization: Bearer $HEROKU_AUTH_TOKEN"
+fi
