@@ -3,6 +3,7 @@
 set -eo pipefail
 
 static_branch=$CIRCLE_BRANCH-static-ci
+pr_number=${CIRCLE_PULL_REQUEST##*/}
 
 cd ~/hugo
 HUGO_ENV=production hugo -v
@@ -31,7 +32,7 @@ else
 
   # create review app on heroku
   curl -X POST https://api.heroku.com/review-apps \
-    -d '{"branch":"'$static_branch'","pr_number":"'$CIRCLE_PR_NUMBER'","pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"null"}}' \
+    -d '{"branch":"'$static_branch'","pr_number":"'$pr_number'","pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"null"}}' \
     -H "Content-Type: application/json" \
     -H "Accept: application/vnd.heroku+json; version=3" \
     -H "Authorization: Bearer $HEROKU_AUTH_TOKEN"
