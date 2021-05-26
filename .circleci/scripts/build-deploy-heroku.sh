@@ -3,7 +3,7 @@
 set -eo pipefail
 
 static_branch=$CIRCLE_BRANCH-static-ci
-pr_number=${CIRCLE_PULL_REQUEST##*/}
+pr_number=$(expr ${CIRCLE_PULL_REQUEST##*/} + 0)
 
 cd ~/hugo
 HUGO_ENV=production hugo -v
