@@ -24,7 +24,7 @@ cp -a ../tmp/.circleci . # copy circleci config back to prevent triggering build
 git add -A
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
-  echo "main build"
+  echo "main build, just commit and force push to gh-pages"
 else
   echo "{}" > composer.json
   echo "<?php include_once('index.html'); ?>" > index.php
