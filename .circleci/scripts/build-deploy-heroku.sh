@@ -33,9 +33,14 @@ else
   git push -f origin $static_branch
 
   # create review app on heroku
-  curl -n -X POST https://api.heroku.com/review-apps \
+  curl -X POST https://api.heroku.com/review-apps \
     -d '{"branch":"'$static_branch'","pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"null"}}' \
     -H "Content-Type: application/json" \
     -H "Accept: application/vnd.heroku+json; version=3" \
     -H "Authorization: Bearer $HEROKU_AUTH_TOKEN"
+
+  # delete static-ci branch from github
+  curl -X DELETE https://api.github.com/repos/SFDigitalServices/sfdigitalservices/git/refs/heads/$static_branch \
+    -H "Accept: application/vnd.github.v3+json" \
+    -H "Authorization: Bearer $GH_ACCESS_TOKEN"
 fi
