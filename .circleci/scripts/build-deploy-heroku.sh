@@ -30,6 +30,12 @@ else
   git commit -m "review app static build for $CIRCLE_BRANCH $CIRCLE_SHA1"
   git push -f origin $static_branch
 
+  # TODO:
+  # currently will not create review app if it already exists
+  # list review apps
+  # loop through and search for static_branch name
+  # if it exists, delete review app before creating
+
   # create review app on heroku
   curl -X POST https://api.heroku.com/review-apps \
     -d '{"branch":"'$static_branch'","pr_number":'$pr_number',"pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"null"}}' \
