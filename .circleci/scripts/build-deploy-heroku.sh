@@ -2,12 +2,6 @@
 
 set -eo pipefail
 
-# hugo build to public dir
-# if main branch
-#   push public dir to gh-pages 
-# else
-#   create heroku review app via api with circle branch
-
 static_branch=$CIRCLE_BRANCH-static-ci
 
 cd ~/hugo
@@ -24,10 +18,13 @@ cp -a ../tmp/.circleci . # copy circleci config back to prevent triggering build
 git add -A
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
-  echo "main build, just commit and force push to gh-pages"
+  git commit -m "build $CIRCLE_SHA1 to gh-pages"
+  git push -f origin gh-pages
 else
+  # make this branch deployable on heroku
   echo "{}" > composer.json
   echo "<?php include_once('index.html'); ?>" > index.php
+
   git add -A
   git commit -m "review app static build for $CIRCLE_BRANCH $CIRCLE_SHA1"
   git push -f origin $static_branch
