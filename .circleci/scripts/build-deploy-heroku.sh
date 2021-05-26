@@ -19,6 +19,7 @@ cp -a ../tmp/.circleci . # copy circleci config back to prevent triggering build
 git add -A
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
+  # main branch, just force push to gh-pages
   git commit -m "build $CIRCLE_SHA1 to gh-pages"
   git push -f origin gh-pages
 else
@@ -26,6 +27,7 @@ else
   echo "{}" > composer.json
   echo "<?php include_once('index.html'); ?>" > index.php
 
+  # push the static site branch to github (for heroku review app api)
   git add -A
   git commit -m "review app static build for $CIRCLE_BRANCH $CIRCLE_SHA1"
   git push -f origin $static_branch
@@ -34,11 +36,11 @@ else
   # currently will not create review app if it already exists
   # list review apps
   # loop through and search for static_branch name
-  # if it exists, delete review app before creating
+  # if it exists, get review app id and delete review app before creating
 
   # create review app on heroku
   curl -X POST https://api.heroku.com/review-apps \
-    -d '{"branch":"'$static_branch'","pr_number":'$pr_number',"pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"null"}}' \
+    -d '{"branch":"'$static_branch'","pr_number":'$pr_number',"pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"'$CIRCLE_SHA1'"}}' \
     -H "Content-Type: application/json" \
     -H "Accept: application/vnd.heroku+json; version=3" \
     -H "Authorization: Bearer $HEROKU_AUTH_TOKEN"
