@@ -39,6 +39,8 @@ else
     -H "Accept: application/vnd.heroku+json; version=3" \
     -H "Authorization: Bearer $HEROKU_AUTH_TOKEN"
 
+  sleep 30s # wait for review app to grab the source blob
+
   # delete static-ci branch from github
   curl -X DELETE https://api.github.com/repos/SFDigitalServices/sfdigitalservices/git/refs/heads/$static_branch \
     -H "Accept: application/vnd.github.v3+json" \
