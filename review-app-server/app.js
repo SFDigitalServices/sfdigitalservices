@@ -4,6 +4,9 @@ const port = process.env.PORT || 3333
 const path = require('path')
 const public = path.join(__dirname, '../public');
 
+app.get('/test', (req, res) => {
+  res.send('test ok')
+})
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(public, 'index.html'))
