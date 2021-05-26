@@ -18,10 +18,11 @@ mkdir -p ../tmp/.circleci && cp -a .circleci/. ../tmp/.circleci/. # copy circlec
 git rm -rf . # remove everything
 mv public/* . # move hugo generated files into root of branch dir
 cp -a ../tmp/.circleci . # copy circleci config back to prevent triggering build on ignored branches
+git add -A
 git push origin $static_branch
 
 curl -n -X POST https://api.heroku.com/review-apps \
-  -d '{"branch":"static","pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"null"}}' \
+  -d '{"branch":"'$static_branch'","pipeline":"'$HEROKU_PIPELINE_ID'","source_blob": { "url":"https://api.github.com/repos/sfdigitalservices/sfdigitalservices/tarball/'$static_branch'","version":"null"}}' \
   -H "Content-Type: application/json" \
   -H "Accept: application/vnd.heroku+json; version=3" \
   -H "Authorization: Bearer $HEROKU_AUTH_TOKEN"
