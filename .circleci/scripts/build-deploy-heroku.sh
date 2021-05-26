@@ -21,7 +21,7 @@ git add -A
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
   # main branch, checkout gh-pages, merge with static, push
-  git checkout -b origin/gh-pages gh-pages
+  git checkout -b gh-pages origin/gh-pages
   git merge $static_branch -m "build $CIRCLE_SHA1 to gh-pages"
   git push origin gh-pages
 else
