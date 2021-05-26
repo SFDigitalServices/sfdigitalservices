@@ -20,10 +20,9 @@ cp -a ../tmp/.circleci . # copy circleci config back to prevent triggering build
 git add -A
 
 if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
-  # main branch, checkout gh-pages, merge with static, push
-  git checkout -b gh-pages origin/gh-pages
-  git merge $static_branch -m "build $CIRCLE_SHA1 to gh-pages"
-  git push origin gh-pages
+  # main branch, force push gh-pages
+  git commit -m "build $CIRCLE_SHA1 to gh-pages"
+  git push -f origin $static_branch:gh-pages
 else
   pr_number=$(expr ${CIRCLE_PULL_REQUEST##*/} + 0)
   
