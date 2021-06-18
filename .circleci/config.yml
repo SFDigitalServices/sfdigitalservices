@@ -19,6 +19,6 @@ jobs:
       - checkout
 
       - run:
-          name: Build and deploy
-          command: ./.circleci/scripts/build-deploy-heroku.sh
+          name: Build
+          command: HUGO_ENV=production hugo -v
 
