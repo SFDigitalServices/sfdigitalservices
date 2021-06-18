@@ -4,7 +4,6 @@ jobs:
     branches:
       ignore:
         - gh-pages
-        - /.*-static-ci/
 
     docker:
       - image: cibuilds/hugo:latest
@@ -19,6 +18,6 @@ jobs:
       - checkout
 
       - run:
-          name: Build
-          command: HUGO_ENV=production hugo -v
+          name: Build static site
+          command: ./.circleci/scripts/build-static-site.sh
 
