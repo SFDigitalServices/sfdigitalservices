@@ -289,7 +289,7 @@
                     
                     <p>Thank you for applying for the Shared Spaces equity grant for:</p>
 					
-					<p>{% if data.DBAName %}{{ data.DBAName }}{% else %}{{ data.noBAN-DBAName }}{% endif %}<br>
+					<p>{% if data.banNumber == 'yes' %}{{ data.DBAName }}{% else %}{{ data['noBAN-DBAName'] }}{% endif %}<br>
 					{{ data.projectAddress }}
 					</p>
 
