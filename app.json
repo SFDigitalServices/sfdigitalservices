@@ -1,0 +1,13 @@
+{
+  "env": {
+    "HUGO_VERSION": {
+      "description": "config var to specify the hugo version to use",
+      "value": "0.83.1"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/aekong/heroku-buildpack-hugo"
+    }
+  ]
+}
