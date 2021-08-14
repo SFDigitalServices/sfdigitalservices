@@ -22,3 +22,11 @@
   <!-- <p>hugo</p> -->
 </footer>
 <script src="/js/main.js"></script>
+<script>
+  var event = "Page view"
+  var eventProps = {
+    "pathname": window.location.pathname,
+    "title": document.title
+  }
+  amplitude.getInstance().logEvent(event, eventProps)
+</script>
