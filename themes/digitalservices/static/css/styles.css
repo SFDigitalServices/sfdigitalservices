@@ -1316,11 +1316,6 @@ ul.left-aligned {
   padding: 50px;
 }
 
-/* Override recruiterbox styling */
-.container div.rbox-widget {
-  margin-bottom: 0.5rem !important;
-}
-
 .separator.center.__web-inspector-hide-shortcut__ {
   display: none;
 }
