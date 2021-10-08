@@ -52,3 +52,4 @@ $ sudo git reset --hard origin/gh-pages
 * Never ever edit files in /public directly (this is hugo generated)
 * This repo is a very basic site, with very few (what hugo calls) content types
 * Refer to Hugo documentation at [https://gohugo.io/documentation/](https://gohugo.io/documentation/)
+ 
