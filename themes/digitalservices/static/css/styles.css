@@ -536,7 +536,7 @@ ul.staff-featured li.name {
 /* Our Team --*/
 #team .container {
     margin-top: 50px;
-} 
+}
 
 #staff {
   background-color: #f1f1f1;
@@ -1314,4 +1314,8 @@ ul.left-aligned {
 
 .rfp {
   padding: 50px;
+}
+
+.separator.center.__web-inspector-hide-shortcut__ {
+  display: none;
 }
