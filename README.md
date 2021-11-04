@@ -42,10 +42,12 @@ These new pages will follow the layout template in `/themes/digitalservices/_def
 * Merge your PR
 * Reach out to someone with server access (currently, that would be @skinnylatte, @aekong and @henryjiang-sfgov) to deploy with the following commands
 
+As of August 2021, you no longer have sudo access to this server. This readme file is being updated to remove all mention of using sudo for git fetch.
+
 ```
 $ cd /opt/rh/httpd24/root/var/www/html/digitalservices/public
-$ sudo git fetch --all
-$ sudo git reset --hard origin/gh-pages
+$ git fetch --all
+$ git reset --hard origin/gh-pages
 ```
 
 ## Notes
