@@ -1319,3 +1319,33 @@ ul.left-aligned {
 .separator.center.__web-inspector-hide-shortcut__ {
   display: none;
 }
+
+/* START RB Widget Styles */
+.rbox-opening-li {
+  padding: 25px 0;
+  border-bottom: 3px solid #eeeeee;
+}
+
+.rbox-opening-li-title {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  font-weight: 500;font-size: 1.4em;
+}
+
+.rbox-job-shortdesc {
+  color: #1C3E57A6;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin: 0.25em 0 0 0;
+}
+
+.rbox-opening-position-type, .rbox-opening-allows-remote {
+  border: 0;
+  padding: 3px 5px;
+  border-radius: 0;
+  display: inline-block;
+  background: #EDF4F7;
+  color: #212123;
+  font-weight: 600;
+}
+/* END RB Widget Styles */
