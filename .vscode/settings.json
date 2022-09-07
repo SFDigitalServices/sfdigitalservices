@@ -1,0 +1,18 @@
+{
+    "[html]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "other": "on",
+            "strings": "off"
+        }
+    },
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "other": "on",
+            "strings": "off"
+        }
+    }
+}
