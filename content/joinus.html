@@ -1,17 +1,29 @@
-+++
-aliases = [
-  "/joinus.html"
-]
-the_type = "job-index"
-+++
-
+---
+aliases:
+  - /joinus.html
+the_type: job-index
+jobs:
+  - title: Senior QA Engineer
+    url: https://jobs.smartrecruiters.com/ni/CityAndCountyOfSanFrancisco1/070dc0d7-d018-4f52-85fc-34756d7ca78c-senior-quality-assurance-engineer-digital-services-1043-
+  - title: Digital Translation Project Manager
+    url: https://jobs.smartrecruiters.com/ni/CityAndCountyOfSanFrancisco1/213d1773-015a-4f46-a3f7-611df281cc9d-digital-translations-project-manager-digital-services-9976-1053-
+  - title: Analytics Engineer, DataSF
+    url: https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/3743990000587056-analytics-engineer-datasf-1042-
+  - title: Product Manager for Platforms and Infrastructure
+    url: https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/743999801085935-product-manager-for-platforms-infrastructure-digital-services-9976-1053-
+  - title: Senior Service Designer
+    url: https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/743999807919460-senior-service-designer-digital-services-9976-1054-
+  - title: Bloomberg Data Program Manager, DataSF
+    url: https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/743999811945241-bloomberg-data-program-manager-datasf-1054-
+  - title: Bloomberg Data Engineer, DataSF
+    url: https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/743999812423990-bloomberg-data-engineer-datasf-1043-
+---
 <div id="background-image" style="background-image:url('/assets/bg-join-us.jpg');"></div>
 <div id="home" class="main">
   <h1 class= "title">Join our team</h1>
-  <!-- <br/><br/><br/>
-    <a class="btn-custom" href="/#contact">Read the Full Report (PDF)</a> -->
 </div>
-<!-- Header End -->
+<!-- /Header -->
+
 <!-- About -->
 <div id="about" class="joinus">
   <div class="container">
@@ -32,87 +44,35 @@ the_type = "job-index"
     </div>
   </div>
 </div>
-<!-- About End -->
+<!-- /About -->
+
 <!-- <div id="separator-image-2" style="background-image:url('/assets/open-chair.jpg');"></div> -->
+
 <!-- Services -->
 <div id="roadmap" class="container">
   <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
     <h1 class="sub-heading">The Roles</h1>
     <div class="separator center"></div>
-    <!--
-    <script type="text/javascript" id="rbox-loader-script">
-      window._rbox_fixed_header = '.navbar-brand > img';
-      if(!window._rbox){
-        _rbox = { host_protocol:document.location.protocol, ready:function(cb){this.onready=cb;} };
-        (function(d, e) {
-          var s, t, i, src=['/static/client-src-served/widget/80867/rbox_api.js', '/static/client-src-served/widget/80867/rbox_impl.js'];
-          t = d.getElementsByTagName(e); t=t[t.length - 1];
-          for(i=0; i<src.length; i++) {
-            s = d.createElement(e); s.src = _rbox.host_protocol + '//w.recruiterbox.com' + eval("src" + String.fromCharCode(91) + String(i) + String.fromCharCode(93));
-            t.parentNode.insertBefore(s, t.nextSibling);
-          }})(document, 'script');
-        }
-    </script>
-    -->
-    <!-- Solution for getting opening to fit into Recruiterbox widget -->
-    <div class="rbox-opening-li">
-      <a href="https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/743999801085935-product-manager-for-platforms-infrastructure-digital-services-9976-1053-" class="rbox-opening-li-title">
-      Product Manager for Platforms and Infrastructure
-      </a>
-      <div class="rbox-job-shortdesc">
-        Location: San Francisco, California, United States
-        <span class="rbox-opening-position-info">
-          <small class="rbox-opening-position-type">Full-time</small>
-        </span>
+    
+    {{ range .Params.jobs }}
+      <div class="rbox-opening-li">
+        <a href="{{ .url }}" class="rbox-opening-li-title">
+          {{ .title }}
+        </a>
+        <div class="rbox-job-shortdesc">
+          Location: {{ with .location }}{{ . }}{{ else }}San Francisco, California, United States{{ end }}
+          <span class="rbox-opening-position-info">
+            <small class="rbox-opening-position-type">
+              {{ with .type }}{{ . }}{{ else }}Full-time{{ end }}
+            </small>
+          </span>
+        </div>
       </div>
-    </div>
-    <div class="rbox-opening-li">
-      <a href="https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/743999807919460-senior-service-designer-digital-services-9976-1054-" class="rbox-opening-li-title">
-      Senior Service Designer
-      </a>
-      <div class="rbox-job-shortdesc">
-        Location: San Francisco, California, United States
-        <span class="rbox-opening-position-info">
-          <small class="rbox-opening-position-type">Full-time</small>
-        </span>
-      </div>
-    </div>
-    <div class="rbox-opening-li"">
-      <a href="https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/743999811945241-bloomberg-data-program-manager-datasf-1054-" class="rbox-opening-li-title">
-        Bloomberg Data Program Manager, DataSF
-      </a>
-      <div class="rbox-job-shortdesc">
-        Location: San Francisco, California, United States
-        <span class="rbox-opening-position-info">
-          <small class="rbox-opening-position-type">Full-time</small>
-        </span>
-      </div>
-    </div>
-    <div class="rbox-opening-li">
-      <a href="https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/743999812423990-bloomberg-data-engineer-datasf-1043-" class="rbox-opening-li-title">
-        Bloomberg Data Engineer, DataSF
-      </a>
-      <div class="rbox-job-shortdesc">
-        Location: San Francisco, California, United States
-        <span class="rbox-opening-position-info">
-          <small class="rbox-opening-position-type">Full-time</small>
-        </span>
-      </div>
-    </div>
-    <div class="rbox-opening-li" style="margin-bottom: 3rem;">
-      <a href="https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/743999814398633-open-data-program-manager-datasf-1054-" class="rbox-opening-li-title">
-        Open Data Program Manager, DataSF
-      </a>
-      <div class="rbox-job-shortdesc">
-        Location: San Francisco, California, United States
-        <span class="rbox-opening-position-info">
-          <small class="rbox-opening-position-type">Full-time</small>
-        </span>
-      </div>
-    </div>
+    {{ end }}
+
   </div>
 </div>
-<!-- container -->
-<!-- Services End -->
+<!-- /Services -->
+
 <div id="separator-image-3" style="background-image:url('/assets/bg-icons.png');"></div>
 {{% subscribeform %}}
