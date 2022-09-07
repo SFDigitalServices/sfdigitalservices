@@ -13,3 +13,4 @@ server.crt
 server.csr
 server.key
 public/
+.hugo_build.lock
