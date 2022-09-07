@@ -1,8 +1,8 @@
 ---
 aliases:
   - /joinus.html
-the_type: job-index
-jobs:
+type: jobs
+roles:
   - title: Senior QA Engineer
     url: https://jobs.smartrecruiters.com/ni/CityAndCountyOfSanFrancisco1/070dc0d7-d018-4f52-85fc-34756d7ca78c-senior-quality-assurance-engineer-digital-services-1043-
   - title: Digital Translation Project Manager
@@ -54,16 +54,16 @@ jobs:
     <h1 class="sub-heading">The Roles</h1>
     <div class="separator center"></div>
     
-    {{ range .Params.jobs }}
+    {{ range .Params.roles }}
       <div class="rbox-opening-li">
         <a href="{{ .url }}" class="rbox-opening-li-title">
           {{ .title }}
         </a>
         <div class="rbox-job-shortdesc">
-          Location: {{ with .location }}{{ . }}{{ else }}San Francisco, California, United States{{ end }}
+          Location: {{ .location | default "San Francisco, California, United States" }}
           <span class="rbox-opening-position-info">
             <small class="rbox-opening-position-type">
-              {{ with .type }}{{ . }}{{ else }}Full-time{{ end }}
+              {{ .type | default "Full-time" }}
             </small>
           </span>
         </div>
