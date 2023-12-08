@@ -1,5 +1,0 @@
-theme = "digitalservices"
-languageCode = "en-us"
-title = "San Francisco Digital Services"
-MetaDataFormat = "toml"
-baseURL = "/"
