@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    {{ if .Params.redirect_url }}
+    <meta http-equiv="refresh" content="0; url={{ .Params.redirect_url }}">
+    {{ end }}
+
     {{ if not .Site.IsServer }}
     <script>
         if (window.location.protocol.indexOf('https') < 0) window.location.href = window.location.href.replace('http://', 'https://');
